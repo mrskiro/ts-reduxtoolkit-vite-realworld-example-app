@@ -1,5 +1,6 @@
 import * as React from 'react'
+import * as SnowFlakes from '~/components/snowflakes'
 
 export const Home = () => {
-    return <div>home</div>
+    return <SnowFlakes.Home />
 }
