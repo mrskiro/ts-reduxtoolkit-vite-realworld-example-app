@@ -1,3 +1,8 @@
-import * as React from "react"
+import * as React from 'react'
+import { Header } from '~/components/recipes/Header'
 
-export const App = () => <div></div>
+export const App = () => (
+    <div>
+        <Header />
+    </div>
+)
