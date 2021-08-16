@@ -1,8 +1,10 @@
 import * as React from 'react'
-import { Header } from '~/components/recipes/Header'
+import * as ReactDom from 'react-dom'
+import { Route } from '~/routes'
 
-export const App = () => (
-    <div>
-        <Header />
-    </div>
+ReactDom.render(
+    <React.StrictMode>
+        <Route />
+    </React.StrictMode>,
+    document.getElementById('root')
 )
