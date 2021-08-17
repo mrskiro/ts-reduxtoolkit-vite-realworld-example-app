@@ -5,12 +5,16 @@ type Size = 'sm' | 'lg'
 type Props = {
     children: React.ReactNode
     size: Size
-    className?: string
-}
+} & JSX.IntrinsicElements['button']
 
-export const Button = (props: Props) => {
-    const className = `btn ${props.className ? props.className : ''}${
-        props.size === 'sm' ? ' btn-sm' : ''
-    }`
-    return <button className={className}>{props.children}</button>
+export const Button = ({ children, size, className, ...restProps }: Props) => {
+    const _className = `btn ${className ? className : ''}${
+        size === 'sm' ? ' btn-sm' : ''
+    }${size === 'lg' ? ' btn-lg' : ''}`
+
+    return (
+        <button className={_className} {...restProps}>
+            {children}
+        </button>
+    )
 }

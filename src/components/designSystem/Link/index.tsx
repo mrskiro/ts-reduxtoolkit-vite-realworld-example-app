@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as ReactRouter from 'react-router-dom'
 
 type Props = {
     href: string
@@ -13,8 +14,8 @@ export const Link = (props: Props) => {
         props.isDisabled ? ' disabled' : ''
     }`
     return (
-        <a className={className} href={props.href}>
+        <ReactRouter.Link className={className} to={props.href}>
             {props.children}
-        </a>
+        </ReactRouter.Link>
     )
 }
