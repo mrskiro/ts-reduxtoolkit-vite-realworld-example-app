@@ -1,10 +1,14 @@
 import * as React from 'react'
 import * as ReactDom from 'react-dom'
+import * as ReactRedux from 'react-redux'
 import { Route } from '~/routes'
+import { store } from '~/store'
 
 ReactDom.render(
     <React.StrictMode>
-        <Route />
+        <ReactRedux.Provider store={store}>
+            <Route />
+        </ReactRedux.Provider>
     </React.StrictMode>,
     document.getElementById('root')
 )
