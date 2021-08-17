@@ -3,6 +3,11 @@ import * as ReactDom from 'react-dom'
 import * as ReactRedux from 'react-redux'
 import { Route } from '~/routes'
 import { store } from '~/store'
+import { worker } from '../mock-server/browser'
+
+if (process.env.NODE_ENV === 'development') {
+    worker.start()
+}
 
 ReactDom.render(
     <React.StrictMode>
