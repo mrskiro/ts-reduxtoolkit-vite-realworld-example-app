@@ -1,11 +1,16 @@
 import * as React from 'react'
 
+type Size = 'sm' | 'lg'
+
 type Props = {
     children: React.ReactNode
+    size: Size
+    className?: string
 }
 
-export const Button = (props: Props) => (
-    <button className="btn btn-lg btn-primary pull-xs-right">
-        {props.children}
-    </button>
-)
+export const Button = (props: Props) => {
+    const className = `btn ${props.className ? props.className : ''}${
+        props.size === 'sm' ? ' btn-sm' : ''
+    }`
+    return <button className={className}>{props.children}</button>
+}
