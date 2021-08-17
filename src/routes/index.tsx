@@ -5,11 +5,13 @@ import { Register } from '~/pages/Register'
 import { Login } from '~/pages/Login'
 import { Setting } from '~/pages/Setting'
 import { Profile } from '~/pages/Profile'
+import { Editor } from '~/pages/Editor'
 
 export const Route = () => (
     <ReactRouter.HashRouter>
         <ReactRouter.Switch>
             <ReactRouter.Route path="/profile/:username" component={Profile} />
+            <ReactRouter.Route path="/editor" component={Editor} />
             <ReactRouter.Route path="/settings" component={Setting} />
             <ReactRouter.Route path="/register" component={Register} />
             <ReactRouter.Route path="/login" component={Login} />
