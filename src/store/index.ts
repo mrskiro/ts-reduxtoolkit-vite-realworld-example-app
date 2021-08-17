@@ -1,8 +1,11 @@
 import * as ReduxToolkit from '@reduxjs/toolkit'
 import { extraArgument } from '~/api'
+import { reducer } from '~/store/reducer'
 
 export const store = ReduxToolkit.configureStore({
-    reducer: {}
+    reducer,
+    middleware: getDefaultMiddleware =>
+        getDefaultMiddleware({ thunk: { extraArgument } })
 })
 
 export type RootState = ReturnType<typeof store.getState>
