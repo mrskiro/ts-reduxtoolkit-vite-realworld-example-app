@@ -8,9 +8,9 @@ export const register = Reduxtoolkit.createAsyncThunk<
     Store.AsyncThunkConfig
 >('me/register', async (arg, thunkAPI) => {
     try {
-        const response = await thunkAPI.extra.api.me.RegisterUser(arg)
-        return response.user
+        const response = await thunkAPI.extra.api.me.register(arg)
+        return response.data.user
     } catch (error) {
-        thunkAPI.rejectWithValue(error)
+        return thunkAPI.rejectWithValue(error)
     }
 })
