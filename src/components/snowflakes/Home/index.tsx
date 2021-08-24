@@ -1,9 +1,15 @@
 import * as React from 'react'
 import * as DesignSystem from '~/components/designSystem'
 import * as Recipes from '~/components/recipes'
+import * as Entities from '~/entities'
 import { Main } from '~/components/layouts/Main'
 
-export const Home = () => (
+type Props = {
+    isLoadingTags: boolean
+    tags: Entities.Tag[]
+}
+
+export const Home = (props: Props) => (
     <Main isGetMe={false}>
         <div className="home-page">
             <DesignSystem.Banner>
@@ -95,32 +101,17 @@ export const Home = () => (
                         <div className="sidebar">
                             <p>Popular Tags</p>
 
-                            <div className="tag-list">
-                                <DesignSystem.Tag href="">
-                                    programming
-                                </DesignSystem.Tag>
-                                <DesignSystem.Tag href="">
-                                    javascript
-                                </DesignSystem.Tag>
-                                <DesignSystem.Tag href="">
-                                    emberjs
-                                </DesignSystem.Tag>
-                                <DesignSystem.Tag href="">
-                                    angularjs
-                                </DesignSystem.Tag>
-                                <DesignSystem.Tag href="">
-                                    react
-                                </DesignSystem.Tag>
-                                <DesignSystem.Tag href="">
-                                    mean
-                                </DesignSystem.Tag>
-                                <DesignSystem.Tag href="">
-                                    node
-                                </DesignSystem.Tag>
-                                <DesignSystem.Tag href="">
-                                    rails
-                                </DesignSystem.Tag>
-                            </div>
+                            {props.isLoadingTags ? (
+                                'Loading tags...'
+                            ) : (
+                                <div className="tag-list">
+                                    {props.tags.map(tag => (
+                                        <DesignSystem.Tag href={`?tag=${tag}`}>
+                                            {tag}
+                                        </DesignSystem.Tag>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

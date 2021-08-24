@@ -8,7 +8,8 @@ export type AppDispatch = typeof store.dispatch
 
 const extraArgument = {
     api: {
-        me: { register: Api.register, login: Api.login }
+        me: { register: Api.register, login: Api.login },
+        tags: { getTags: Api.getTags }
     }
 }
 
