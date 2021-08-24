@@ -1,14 +1,20 @@
 import * as Reduxtoolkit from '@reduxjs/toolkit'
+import * as History from 'history'
 import * as Store from '~/store'
 import * as Entities from '~/entities'
 
+// https://reactrouter.com/web/guides/deep-redux-integration
 export const register = Reduxtoolkit.createAsyncThunk<
     Entities.Me,
-    { name: string; email: string; password: string },
+    {
+        user: { name: string; email: string; password: string }
+        history: History.History
+    },
     Store.AsyncThunkConfig
 >('me/register', async (arg, thunkAPI) => {
     try {
-        const response = await thunkAPI.extra.api.me.register(arg)
+        const response = await thunkAPI.extra.api.me.register(arg.user)
+        arg.history.push('/')
         return response.data.user
     } catch (error) {
         return thunkAPI.rejectWithValue(error)

@@ -10,7 +10,7 @@ type Props = {
     onChangeName: (e: React.ChangeEvent<HTMLInputElement>) => void
     onChangeEmail: (e: React.ChangeEvent<HTMLInputElement>) => void
     onChangePassword: (e: React.ChangeEvent<HTMLInputElement>) => void
-    onSignUp: () => void
+    onSignUp: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
 export const Register = (props: Props) => (
