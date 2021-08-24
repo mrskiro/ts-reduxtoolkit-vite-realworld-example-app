@@ -1,7 +1,11 @@
 import * as React from 'react'
 import * as DesignSystem from '~/components/designSystem'
 
-export const Header = () => (
+type Props = {
+    isGetMe: boolean
+}
+
+export const Header = (props: Props) => (
     <nav className="navbar navbar-light">
         <div className="container">
             <DesignSystem.Logo href="" />
@@ -11,22 +15,46 @@ export const Header = () => (
                         Home
                     </DesignSystem.Link>
                 </li>
-                <li className="nav-item">
-                    <DesignSystem.Link className="nav-link" href="/editor">
-                        <i className="ion-compose"></i>&nbsp;New Post
-                    </DesignSystem.Link>
-                </li>
-                <li className="nav-item">
-                    <DesignSystem.Link className="nav-link" href="/settings">
-                        <i className="ion-gear-a"></i>&nbsp;Settings
-                    </DesignSystem.Link>
-                </li>
+                {props.isGetMe ? (
+                    <>
+                        <li className="nav-item">
+                            <DesignSystem.Link
+                                className="nav-link"
+                                href="/editor"
+                            >
+                                <i className="ion-compose"></i>&nbsp;New Post
+                            </DesignSystem.Link>
+                        </li>
+                        <li className="nav-item">
+                            <DesignSystem.Link
+                                className="nav-link"
+                                href="/settings"
+                            >
+                                <i className="ion-gear-a"></i>&nbsp;Settings
+                            </DesignSystem.Link>
+                        </li>
+                    </>
+                ) : (
+                    <>
+                        <li className="nav-item">
+                            <DesignSystem.Link
+                                className="nav-link"
+                                href="/login"
+                            >
+                                Sign in
+                            </DesignSystem.Link>
+                        </li>
 
-                <li className="nav-item">
-                    <DesignSystem.Link className="nav-link" href="/register">
-                        Sign up
-                    </DesignSystem.Link>
-                </li>
+                        <li className="nav-item">
+                            <DesignSystem.Link
+                                className="nav-link"
+                                href="/register"
+                            >
+                                Sign up
+                            </DesignSystem.Link>
+                        </li>
+                    </>
+                )}
             </ul>
         </div>
     </nav>
