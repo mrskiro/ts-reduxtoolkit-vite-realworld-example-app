@@ -8,7 +8,7 @@ type Props = {
     password: string
     onChangeEmail: (e: React.ChangeEvent<HTMLInputElement>) => void
     onChangePassword: (e: React.ChangeEvent<HTMLInputElement>) => void
-    onSignIn: () => void
+    onSignIn: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
 export const Login = (props: Props) => (

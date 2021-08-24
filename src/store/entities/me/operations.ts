@@ -20,3 +20,20 @@ export const register = Reduxtoolkit.createAsyncThunk<
         return thunkAPI.rejectWithValue(error)
     }
 })
+
+export const login = Reduxtoolkit.createAsyncThunk<
+    Entities.Me,
+    {
+        user: { email: string; password: string }
+        history: History.History
+    },
+    Store.AsyncThunkConfig
+>('me/login', async (arg, thunkAPI) => {
+    try {
+        const response = await thunkAPI.extra.api.me.login(arg.user)
+        arg.history.push('/')
+        return response.data.user
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error)
+    }
+})
