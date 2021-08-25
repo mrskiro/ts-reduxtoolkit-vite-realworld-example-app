@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "lint": "eslint 'src/**/*{ts,tsx}'"
+    "lint": "eslint 'src/**/*{ts,tsx}'",
+    "test": "jest"
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.6.1",
@@ -16,6 +17,9 @@
     "react-router-dom": "5.2.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "5.14.1",
+    "@testing-library/react": "12.0.0",
+    "@types/jest": "27.0.1",
     "@types/react": "17.0.0",
     "@types/react-dom": "17.0.9",
     "@types/react-router-dom": "5.1.8",
@@ -26,8 +30,10 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.0",
     "eslint-plugin-react-hooks": "4.2.0",
+    "jest": "27.0.6",
     "msw": "0.34.0",
     "prettier": "2.3.2",
+    "ts-jest": "27.0.5",
     "typescript": "4.3.2",
     "vite": "2.4.4"
   },

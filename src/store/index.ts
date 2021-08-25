@@ -6,7 +6,7 @@ export type RootState = ReturnType<typeof store.getState>
 
 export type AppDispatch = typeof store.dispatch
 
-const extraArgument = {
+export const extraArgument = {
     api: {
         me: { register: Api.register, login: Api.login },
         tags: { getTags: Api.getTags }
