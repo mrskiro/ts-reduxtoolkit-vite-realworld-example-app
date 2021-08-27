@@ -8,7 +8,7 @@ export const getTags = Reduxtoolkit.createAsyncThunk<
     Store.AsyncThunkConfig
 >('tags/getTags', async (_arg, thunkAPI) => {
     try {
-        const response = await thunkAPI.extra.api.tags.getTags()
+        const response = await thunkAPI.extra.api.tag.getTags()
         return response.data.tags
     } catch (error) {
         return thunkAPI.rejectWithValue(error)

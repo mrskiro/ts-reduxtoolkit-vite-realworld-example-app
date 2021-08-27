@@ -1,3 +1,3 @@
-export * from './users'
-export * from './tags'
-export * from './articles'
+export * from './user'
+export * from './tag'
+export * from './article'
