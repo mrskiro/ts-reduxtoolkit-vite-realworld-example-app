@@ -15,10 +15,12 @@ type Props = {
 export const Home = (props: Props) => (
     <Main isGetMe={props.isGetMe}>
         <div className="home-page">
-            <DesignSystem.Banner>
-                <h1 className="logo-font">conduit</h1>
-                <p>A place to share your knowledge.</p>
-            </DesignSystem.Banner>
+            {!props.isGetMe && (
+                <DesignSystem.Banner>
+                    <h1 className="logo-font">conduit</h1>
+                    <p>A place to share your knowledge.</p>
+                </DesignSystem.Banner>
+            )}
 
             <div className="container page">
                 <div className="row">
