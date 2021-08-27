@@ -17,3 +17,18 @@ export const getArticles = async (): Promise<
 
     return response
 }
+
+type FavoriteResponse = {
+    article: Entities.Article
+}
+
+export const favorite = async (
+    slug: Entities.Article['slug']
+): Promise<AxiosResponse<FavoriteResponse>> => {
+    const response = await apiInstance.post<
+        void,
+        AxiosResponse<FavoriteResponse>
+    >(`articles/${slug}/favorite`)
+
+    return response
+}

@@ -22,3 +22,17 @@ export const getArticles = Reduxtoolkit.createAsyncThunk<
         return thunkAPI.rejectWithValue(error)
     }
 })
+
+export const favorite = Reduxtoolkit.createAsyncThunk<
+    Entities.Article,
+    { slug: Entities.Article['slug'] },
+    Store.AsyncThunkConfig
+>('articles/favorite', async (arg, thunkAPI) => {
+    try {
+        const response = await thunkAPI.extra.api.article.favorite(arg.slug)
+
+        return response.data.article
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error)
+    }
+})

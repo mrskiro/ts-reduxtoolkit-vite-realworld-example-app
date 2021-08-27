@@ -10,7 +10,7 @@ export const extraArgument = {
     api: {
         me: { register: Api.register, login: Api.login },
         tag: { getTags: Api.getTags },
-        article: { getArticles: Api.getArticles }
+        article: { getArticles: Api.getArticles, favorite: Api.favorite }
     }
 }
 

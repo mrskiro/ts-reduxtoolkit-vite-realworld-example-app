@@ -10,6 +10,7 @@ type Props = {
     isLoadingTags: boolean
     tags: Entities.Tag[]
     articles: Entities.Article[]
+    onClickFavorite: (slug: Entities.Article['slug']) => () => void
 }
 
 export const Home = (props: Props) => (
@@ -74,10 +75,21 @@ export const Home = (props: Props) => (
                                                   {article.createdAt}
                                               </span>
                                           </div>
-                                          <button className="btn btn-outline-primary btn-sm pull-xs-right">
+                                          <DesignSystem.Button
+                                              size="sm"
+                                              variant={
+                                                  article.favorited
+                                                      ? 'primary'
+                                                      : 'outline-primary'
+                                              }
+                                              className="pull-xs-right"
+                                              onClick={props.onClickFavorite(
+                                                  article.slug
+                                              )}
+                                          >
                                               <i className="ion-heart"></i>{' '}
                                               {article.favoritesCount}
-                                          </button>
+                                          </DesignSystem.Button>
                                       </div>
                                       <DesignSystem.Link
                                           href=""
