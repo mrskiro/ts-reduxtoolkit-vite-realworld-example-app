@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as History from 'history'
 import * as Node from 'msw/node'
 import * as Rtl from '~/__tests__/utils'
-import * as Api from '../../../../mock-server/api'
+import * as Api from '../../../../mock_server/api'
 import * as Store from '~/store'
 import '@testing-library/jest-dom'
 
