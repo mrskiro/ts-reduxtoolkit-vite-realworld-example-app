@@ -24,6 +24,27 @@ export const getArticles = Reduxtoolkit.createAsyncThunk<
     }
 })
 
+export const getArticlesFeed = Reduxtoolkit.createAsyncThunk<
+    Record<Entities.Article['slug'], Entities.Article>,
+    Api.GetArticlesParameters,
+    Store.AsyncThunkConfig
+>('entities/articles/getArticlesFeed', async (arg, thunkAPI) => {
+    try {
+        const response = await thunkAPI.extra.api.article.getArticlesFeed(arg)
+        const articles: Record<Entities.Article['slug'], Entities.Article> =
+            response.data.articles.reduce(
+                (prev, current) => ({
+                    ...prev,
+                    [current.slug]: current
+                }),
+                {}
+            )
+        return articles
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error)
+    }
+})
+
 export const favorite = Reduxtoolkit.createAsyncThunk<
     Entities.Article,
     { slug: Entities.Article['slug'] },

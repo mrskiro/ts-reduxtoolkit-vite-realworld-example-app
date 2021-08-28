@@ -86,64 +86,70 @@ export const Home = (props: Props) => (
                                 )}
                             </ul>
                         </div>
-                        {props.isLoadingArticles
-                            ? 'loading...'
-                            : props.articles.map(article => (
-                                  <div className="article-preview">
-                                      <div className="article-meta">
-                                          {/* todo */}
-                                          <DesignSystem.Link href="profile.html">
-                                              <img
-                                                  src={article.author.image}
-                                                  alt=""
-                                              />
-                                          </DesignSystem.Link>
-                                          <div className="info">
-                                              <DesignSystem.Link
-                                                  href=""
-                                                  className="author"
-                                              >
-                                                  {article.author.username}
-                                              </DesignSystem.Link>
-                                              <span className="date">
-                                                  {Libs.formatForHome(
-                                                      article.createdAt
-                                                  )}
-                                              </span>
-                                          </div>
-                                          <DesignSystem.Button
-                                              size="sm"
-                                              variant={
-                                                  article.favorited
-                                                      ? 'primary'
-                                                      : 'outline-primary'
-                                              }
-                                              className="pull-xs-right"
-                                              onClick={props.onClickFavorite(
-                                                  article.slug
-                                              )}
-                                          >
-                                              <i className="ion-heart"></i>{' '}
-                                              {article.favoritesCount}
-                                          </DesignSystem.Button>
-                                      </div>
-                                      <DesignSystem.Link
-                                          href=""
-                                          className="preview-link"
-                                      >
-                                          <h1>{article.title}</h1>
-                                          <p>{article.description}</p>
-                                          <span>Read more...</span>
-                                          <ul className="tag-list">
-                                              {article.tagList.map(tag => (
-                                                  <li className="tag-default tag-pill tag-outline">
-                                                      {tag}
-                                                  </li>
-                                              ))}
-                                          </ul>
-                                      </DesignSystem.Link>
-                                  </div>
-                              ))}
+                        {props.isLoadingArticles ? (
+                            <div className="article-preview">loading...</div>
+                        ) : props.articles.length === 0 ? (
+                            <div className="article-preview">
+                                No articles are here... yet.
+                            </div>
+                        ) : (
+                            props.articles.map(article => (
+                                <div className="article-preview">
+                                    <div className="article-meta">
+                                        {/* todo */}
+                                        <DesignSystem.Link href="profile.html">
+                                            <img
+                                                src={article.author.image}
+                                                alt=""
+                                            />
+                                        </DesignSystem.Link>
+                                        <div className="info">
+                                            <DesignSystem.Link
+                                                href=""
+                                                className="author"
+                                            >
+                                                {article.author.username}
+                                            </DesignSystem.Link>
+                                            <span className="date">
+                                                {Libs.formatForHome(
+                                                    article.createdAt
+                                                )}
+                                            </span>
+                                        </div>
+                                        <DesignSystem.Button
+                                            size="sm"
+                                            variant={
+                                                article.favorited
+                                                    ? 'primary'
+                                                    : 'outline-primary'
+                                            }
+                                            className="pull-xs-right"
+                                            onClick={props.onClickFavorite(
+                                                article.slug
+                                            )}
+                                        >
+                                            <i className="ion-heart"></i>{' '}
+                                            {article.favoritesCount}
+                                        </DesignSystem.Button>
+                                    </div>
+                                    <DesignSystem.Link
+                                        href=""
+                                        className="preview-link"
+                                    >
+                                        <h1>{article.title}</h1>
+                                        <p>{article.description}</p>
+                                        <span>Read more...</span>
+                                        <ul className="tag-list">
+                                            {article.tagList.map(tag => (
+                                                <li className="tag-default tag-pill tag-outline">
+                                                    {tag}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </DesignSystem.Link>
+                                </div>
+                            ))
+                        )}
                     </div>
 
                     <div className="col-md-3">

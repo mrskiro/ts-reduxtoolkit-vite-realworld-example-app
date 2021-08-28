@@ -6,9 +6,7 @@ export const apiInstance = axios.create({
     baseURL: endpoint
 })
 
-export const toQueryString = <T extends string>(
-    obj: Record<string, T>
-): string =>
+export const toQueryString = <T, U>(obj: Partial<Record<keyof T, U>>): string =>
     Object.entries(obj)
-        .map(pair => pair.map(encodeURIComponent).join('='))
+        .map(pair => pair.map(v => encodeURIComponent(v as string)).join('='))
         .join('&')

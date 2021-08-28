@@ -28,6 +28,18 @@ export const getArticles = async (
     return response
 }
 
+export const getArticlesFeed = async (
+    parameters: GetArticlesParameters = {}
+): Promise<AxiosResponse<GetArticlesResponse>> => {
+    const endpoint = `articles/feed?${Modules.toQueryString(parameters)}`
+    const response = await Modules.apiInstance.get<
+        void,
+        AxiosResponse<GetArticlesResponse>
+    >(endpoint)
+
+    return response
+}
+
 type FavoriteResponse = {
     article: Entities.Article
 }

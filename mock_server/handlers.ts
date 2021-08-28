@@ -6,5 +6,6 @@ export const handlers = [
     Api.getUser,
     Api.getTags,
     Api.getArticles,
+    Api.getArticlesFeed,
     Api.favorite
 ]

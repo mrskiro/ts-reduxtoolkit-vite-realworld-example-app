@@ -26,8 +26,18 @@ export const Home = () => {
 
     React.useEffect(() => {
         dispatch(Tags.getTags())
-        dispatch(Articles.getArticles({}))
     }, [dispatch])
+
+    React.useEffect(() => {
+        if (selectedTab !== 'Global Feed') return
+
+        dispatch(Articles.getArticles({}))
+    }, [dispatch, selectedTab])
+
+    React.useEffect(() => {
+        if (selectedTab !== 'Your Feed') return
+        dispatch(Articles.getArticlesFeed({}))
+    }, [dispatch, selectedTab])
 
     React.useEffect(() => {
         if (!hashTag) return
