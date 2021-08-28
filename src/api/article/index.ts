@@ -50,7 +50,7 @@ export const favorite = async (
     const response = await Modules.apiInstance.post<
         void,
         AxiosResponse<FavoriteResponse>
-    >(`articles/${slug}/favorite`, { headers: Modules.authHeaders })
+    >(`articles/${slug}/favorite`, {}, { headers: Modules.authHeaders })
 
     return response
 }

@@ -27,6 +27,21 @@ export const follow = async (
     const response = await Modules.apiInstance.post<
         void,
         AxiosResponse<FollowResponse>
+    >(`profiles/${username}/follow`, {}, { headers: Modules.authHeaders })
+
+    return response
+}
+
+type UnFollowResponse = {
+    profile: Entities.Profile
+}
+
+export const unFollow = async (
+    username: Entities.Profile['username']
+): Promise<AxiosResponse<UnFollowResponse>> => {
+    const response = await Modules.apiInstance.delete<
+        void,
+        AxiosResponse<UnFollowResponse>
     >(`profiles/${username}/follow`, { headers: Modules.authHeaders })
 
     return response
