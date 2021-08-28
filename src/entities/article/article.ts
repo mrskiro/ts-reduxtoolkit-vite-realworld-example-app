@@ -10,5 +10,5 @@ export type Article = {
     updatedAt: string
     favorited: boolean
     favoritesCount: number
-    author: Entities.User
+    author: Entities.Profile
 }
