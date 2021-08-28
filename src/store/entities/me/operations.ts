@@ -11,7 +11,7 @@ export const register = Reduxtoolkit.createAsyncThunk<
         history: History.History
     },
     Store.AsyncThunkConfig
->('me/register', async (arg, thunkAPI) => {
+>('entities/me/register', async (arg, thunkAPI) => {
     try {
         const response = await thunkAPI.extra.api.me.register(arg.user)
         arg.history.push('/')
@@ -28,7 +28,7 @@ export const login = Reduxtoolkit.createAsyncThunk<
         history: History.History
     },
     Store.AsyncThunkConfig
->('me/login', async (arg, thunkAPI) => {
+>('entities/me/login', async (arg, thunkAPI) => {
     try {
         const response = await thunkAPI.extra.api.me.login(arg.user)
         arg.history.push('/')

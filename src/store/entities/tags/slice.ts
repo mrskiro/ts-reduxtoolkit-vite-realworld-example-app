@@ -18,7 +18,7 @@ const initialState: State = {
 }
 
 const slice = Reduxtoolkit.createSlice({
-    name: 'tags',
+    name: 'entities/tags',
     initialState,
     reducers: {},
     extraReducers: builder => {

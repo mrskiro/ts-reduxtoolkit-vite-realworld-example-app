@@ -6,7 +6,7 @@ export const getTags = Reduxtoolkit.createAsyncThunk<
     Entities.Tag[],
     void,
     Store.AsyncThunkConfig
->('tags/getTags', async (_arg, thunkAPI) => {
+>('entities/tags/getTags', async (_arg, thunkAPI) => {
     try {
         const response = await thunkAPI.extra.api.tag.getTags()
         return response.data.tags

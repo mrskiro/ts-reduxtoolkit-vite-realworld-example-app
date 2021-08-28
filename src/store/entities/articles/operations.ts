@@ -7,7 +7,7 @@ export const getArticles = Reduxtoolkit.createAsyncThunk<
     Record<Entities.Article['slug'], Entities.Article>,
     Api.GetArticlesParameters,
     Store.AsyncThunkConfig
->('articles/getArticles', async (arg, thunkAPI) => {
+>('entities/articles/getArticles', async (arg, thunkAPI) => {
     try {
         const response = await thunkAPI.extra.api.article.getArticles(arg)
         const articles: Record<Entities.Article['slug'], Entities.Article> =
@@ -28,7 +28,7 @@ export const favorite = Reduxtoolkit.createAsyncThunk<
     Entities.Article,
     { slug: Entities.Article['slug'] },
     Store.AsyncThunkConfig
->('articles/favorite', async (arg, thunkAPI) => {
+>('entities/articles/favorite', async (arg, thunkAPI) => {
     try {
         const response = await thunkAPI.extra.api.article.favorite(arg.slug)
 

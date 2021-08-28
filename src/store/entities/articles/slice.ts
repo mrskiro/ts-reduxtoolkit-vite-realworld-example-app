@@ -14,7 +14,7 @@ const initialState: State = {
 }
 
 const slice = Reduxtoolkit.createSlice({
-    name: 'articles',
+    name: 'entities/articles',
     initialState,
     reducers: {},
     extraReducers: builder => {
