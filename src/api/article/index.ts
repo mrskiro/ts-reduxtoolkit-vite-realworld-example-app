@@ -35,7 +35,7 @@ export const getArticlesFeed = async (
     const response = await Modules.apiInstance.get<
         void,
         AxiosResponse<GetArticlesResponse>
-    >(endpoint)
+    >(endpoint, { headers: Modules.authHeaders })
 
     return response
 }
@@ -50,7 +50,7 @@ export const favorite = async (
     const response = await Modules.apiInstance.post<
         void,
         AxiosResponse<FavoriteResponse>
-    >(`articles/${slug}/favorite`)
+    >(`articles/${slug}/favorite`, { headers: Modules.authHeaders })
 
     return response
 }

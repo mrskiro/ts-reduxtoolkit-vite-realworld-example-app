@@ -16,3 +16,18 @@ export const getProfile = async (
 
     return response
 }
+
+type FollowResponse = {
+    profile: Entities.Profile
+}
+
+export const follow = async (
+    username: Entities.Profile['username']
+): Promise<AxiosResponse<FollowResponse>> => {
+    const response = await Modules.apiInstance.post<
+        void,
+        AxiosResponse<FollowResponse>
+    >(`profiles/${username}/follow`, { headers: Modules.authHeaders })
+
+    return response
+}
