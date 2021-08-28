@@ -96,8 +96,9 @@ export const Home = (props: Props) => (
                             props.articles.map(article => (
                                 <div className="article-preview">
                                     <div className="article-meta">
-                                        {/* todo */}
-                                        <DesignSystem.Link href="profile.html">
+                                        <DesignSystem.Link
+                                            href={`/profile/${article.author.username}`}
+                                        >
                                             <img
                                                 src={article.author.image}
                                                 alt=""
@@ -105,13 +106,13 @@ export const Home = (props: Props) => (
                                         </DesignSystem.Link>
                                         <div className="info">
                                             <DesignSystem.Link
-                                                href=""
+                                                href={`/profile/${article.author.username}`}
                                                 className="author"
                                             >
                                                 {article.author.username}
                                             </DesignSystem.Link>
                                             <span className="date">
-                                                {Libs.formatForHome(
+                                                {Libs.formatForArticle(
                                                     article.createdAt
                                                 )}
                                             </span>

@@ -14,6 +14,9 @@ export const extraArgument = {
             getArticles: Api.getArticles,
             getArticlesFeed: Api.getArticlesFeed,
             favorite: Api.favorite
+        },
+        profile: {
+            getProfile: Api.getProfile
         }
     }
 }
