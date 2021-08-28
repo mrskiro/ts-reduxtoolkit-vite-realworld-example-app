@@ -14,6 +14,7 @@ export const register = Reduxtoolkit.createAsyncThunk<
 >('entities/me/register', async (arg, thunkAPI) => {
     try {
         const response = await thunkAPI.extra.api.me.register(arg.user)
+        localStorage.setItem('token', response.data.user.token)
         arg.history.push('/')
         return response.data.user
     } catch (error) {
@@ -31,6 +32,7 @@ export const login = Reduxtoolkit.createAsyncThunk<
 >('entities/me/login', async (arg, thunkAPI) => {
     try {
         const response = await thunkAPI.extra.api.me.login(arg.user)
+        localStorage.setItem('token', response.data.user.token)
         arg.history.push('/')
         return response.data.user
     } catch (error) {

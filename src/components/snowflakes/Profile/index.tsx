@@ -12,6 +12,8 @@ type Props = {
     profile: Entities.Profile
     articles: Entities.Article[]
     selectedTab: 'My Articles' | 'Favorited Articles'
+    onClickFollow: () => void
+    onClickUnFollow: () => void
     onChangeTab: (tab: 'My Articles' | 'Favorited Articles') => () => void
     onClickFavorite: (slug: Entities.Article['slug']) => () => void
 }
@@ -30,13 +32,27 @@ export const Profile = (props: Props) => (
                                 />
                                 <h4>{props.profile.username}</h4>
                                 <p>{props.profile.bio}</p>
-                                <DesignSystem.Button
-                                    size="sm"
-                                    className="btn-outline-secondary action-btn"
-                                >
-                                    <i className="ion-plus-round"></i>
-                                    &nbsp; Follow {props.profile.username}
-                                </DesignSystem.Button>
+                                {props.profile.following ? (
+                                    <DesignSystem.Button
+                                        size="sm"
+                                        className="btn-outline-secondary action-btn"
+                                        onClick={props.onClickUnFollow}
+                                    >
+                                        <i className="ion-plus-round"></i>
+                                        &nbsp;{' '}
+                                        {`UnFollow ${props.profile.username}`}
+                                    </DesignSystem.Button>
+                                ) : (
+                                    <DesignSystem.Button
+                                        size="sm"
+                                        className="btn-outline-secondary action-btn"
+                                        onClick={props.onClickFollow}
+                                    >
+                                        <i className="ion-plus-round"></i>
+                                        &nbsp;{' '}
+                                        {`Follow ${props.profile.username}`}
+                                    </DesignSystem.Button>
+                                )}
                             </div>
                         </div>
                     </div>

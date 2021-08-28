@@ -16,7 +16,9 @@ export const extraArgument = {
             favorite: Api.favorite
         },
         profile: {
-            getProfile: Api.getProfile
+            getProfile: Api.getProfile,
+            follow: Api.follow,
+            unFollow: Api.unFollow
         }
     }
 }

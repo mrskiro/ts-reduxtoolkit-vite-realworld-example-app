@@ -28,6 +28,18 @@ const slice = Reduxtoolkit.createSlice({
                 [action.payload.username]: action.payload
             }
         })
+        builder.addCase(Operations.follow.fulfilled, (state, action) => {
+            state.data = {
+                ...state.data,
+                [action.payload.username]: action.payload
+            }
+        })
+        builder.addCase(Operations.unFollow.fulfilled, (state, action) => {
+            state.data = {
+                ...state.data,
+                [action.payload.username]: action.payload
+            }
+        })
     }
 })
 

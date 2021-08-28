@@ -18,3 +18,33 @@ export const getProfile = Reduxtoolkit.createAsyncThunk<
         return thunkAPI.rejectWithValue(error)
     }
 })
+
+export const follow = Reduxtoolkit.createAsyncThunk<
+    Entities.Profile,
+    {
+        username: Entities.Profile['username']
+    },
+    Store.AsyncThunkConfig
+>('entities/profiles/follow', async (arg, thunkAPI) => {
+    try {
+        const response = await thunkAPI.extra.api.profile.follow(arg.username)
+        return response.data.profile
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error)
+    }
+})
+
+export const unFollow = Reduxtoolkit.createAsyncThunk<
+    Entities.Profile,
+    {
+        username: Entities.Profile['username']
+    },
+    Store.AsyncThunkConfig
+>('entities/profiles/unFollow', async (arg, thunkAPI) => {
+    try {
+        const response = await thunkAPI.extra.api.profile.unFollow(arg.username)
+        return response.data.profile
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error)
+    }
+})

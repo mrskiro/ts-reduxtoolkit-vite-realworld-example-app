@@ -41,6 +41,18 @@ export const Profile = () => {
         dispatch(Articles.getArticles({ author: username }))
     }, [dispatch, username, location.pathname])
 
+    const onClickFollow = () => {
+        if (!isGetme) {
+            history.push('/login')
+            return
+        }
+        dispatch(Profiles.follow({ username }))
+    }
+
+    const onClickUnFollow = () => {
+        dispatch(Profiles.unFollow({ username }))
+    }
+
     const onClickFavorite = (slug: Entities.Article['slug']) => () => {
         if (!isGetme) {
             history.push('/login')
@@ -65,6 +77,8 @@ export const Profile = () => {
             isLoadingArticles={isLoadingArticles}
             articles={articles}
             selectedTab={selectedTab}
+            onClickFollow={onClickFollow}
+            onClickUnFollow={onClickUnFollow}
             onChangeTab={onChangeTab}
             onClickFavorite={onClickFavorite}
         />

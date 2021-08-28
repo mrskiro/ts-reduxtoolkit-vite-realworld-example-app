@@ -35,11 +35,8 @@ const slice = Reduxtoolkit.createSlice({
                 state.data = action.payload
             }
         )
-        builder.addCase(Operations.favorite.pending, state => {
-            state.status = Status.pending
-        })
+        builder.addCase(Operations.favorite.pending, () => {})
         builder.addCase(Operations.favorite.fulfilled, (state, action) => {
-            state.status = Status.fullfiled
             state.data = {
                 ...state.data,
                 [action.payload.slug]: action.payload
