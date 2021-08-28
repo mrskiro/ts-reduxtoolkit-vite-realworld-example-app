@@ -56,12 +56,12 @@ export const Profile = () => {
             : history.push(`/profile/${username}/favorites`)
     }
 
-    if (isLoadingProfile) return null
-
+    if (!profile) return null
     return (
         <SnowFlakes.Profile
             isGetMe={isGetme}
             profile={profile}
+            isLoadingProfile={isLoadingProfile}
             isLoadingArticles={isLoadingArticles}
             articles={articles}
             selectedTab={selectedTab}

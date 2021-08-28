@@ -12,5 +12,9 @@ export const selectIsLoading = ReduxToolkit.createSelector(
 
 export const selectProfileByUsername = ReduxToolkit.createSelector(
     selectState,
-    state => (username: Entities.Profile['username']) => state.data[username]
+    state =>
+        (
+            username: Entities.Profile['username']
+        ): Entities.Profile | undefined =>
+            state.data[username]
 )
