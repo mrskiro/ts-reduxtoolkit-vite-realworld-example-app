@@ -2,6 +2,7 @@ import * as React from 'react'
 import * as DesignSystem from '~/components/designSystem'
 import * as Recipes from '~/components/recipes'
 import * as Entities from '~/entities'
+import * as Libs from '~/libs'
 import { Main } from '~/components/layouts/Main'
 
 type Props = {
@@ -105,7 +106,9 @@ export const Home = (props: Props) => (
                                                   {article.author.username}
                                               </DesignSystem.Link>
                                               <span className="date">
-                                                  {article.createdAt}
+                                                  {Libs.formatForHome(
+                                                      article.createdAt
+                                                  )}
                                               </span>
                                           </div>
                                           <DesignSystem.Button
