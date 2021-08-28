@@ -1,19 +1,29 @@
 import { AxiosResponse } from 'axios'
-import { apiInstance } from '~/api/instance'
+import * as Modules from '~/api/modules'
 import * as Entities from '~/entities'
+
+export type GetArticlesParameters = {
+    limit?: number
+    offset?: number
+    // filters
+    tag?: string
+    author?: string
+    favorited?: string
+}
 
 type GetArticlesResponse = {
     articles: Entities.Article[]
     articlesCount: number
 }
 
-export const getArticles = async (): Promise<
-    AxiosResponse<GetArticlesResponse>
-> => {
-    const response = await apiInstance.get<
+export const getArticles = async (
+    parameters: GetArticlesParameters = {}
+): Promise<AxiosResponse<GetArticlesResponse>> => {
+    const endpoint = `articles?${Modules.toQueryString(parameters)}`
+    const response = await Modules.apiInstance.get<
         void,
         AxiosResponse<GetArticlesResponse>
-    >('articles')
+    >(endpoint)
 
     return response
 }
@@ -25,7 +35,7 @@ type FavoriteResponse = {
 export const favorite = async (
     slug: Entities.Article['slug']
 ): Promise<AxiosResponse<FavoriteResponse>> => {
-    const response = await apiInstance.post<
+    const response = await Modules.apiInstance.post<
         void,
         AxiosResponse<FavoriteResponse>
     >(`articles/${slug}/favorite`)

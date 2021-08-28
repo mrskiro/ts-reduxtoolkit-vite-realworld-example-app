@@ -1,5 +1,5 @@
 import { AxiosResponse } from 'axios'
-import { apiInstance } from '~/api/instance'
+import * as Modules from '~/api/modules'
 import * as Entities from '~/entities'
 
 type RegisterArg = {
@@ -11,7 +11,7 @@ type RegisterArg = {
 export const register = async (
     arg: RegisterArg
 ): Promise<AxiosResponse<{ user: Entities.Me }>> => {
-    const response = await apiInstance.post<
+    const response = await Modules.apiInstance.post<
         RegisterArg,
         AxiosResponse<{ user: Entities.Me }>
     >('users', { user: arg })
@@ -25,7 +25,7 @@ type LoginArg = {
 }
 
 export const login = async (arg: LoginArg) => {
-    const response = await apiInstance.post<
+    const response = await Modules.apiInstance.post<
         LoginArg,
         AxiosResponse<{ user: Entities.Me }>
     >('users/login', { user: arg })
