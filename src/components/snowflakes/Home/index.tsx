@@ -131,6 +131,13 @@ export const Home = (props: Props) => (
                                           <h1>{article.title}</h1>
                                           <p>{article.description}</p>
                                           <span>Read more...</span>
+                                          <ul className="tag-list">
+                                              {article.tagList.map(tag => (
+                                                  <li className="tag-default tag-pill tag-outline">
+                                                      {tag}
+                                                  </li>
+                                              ))}
+                                          </ul>
                                       </DesignSystem.Link>
                                   </div>
                               ))}
