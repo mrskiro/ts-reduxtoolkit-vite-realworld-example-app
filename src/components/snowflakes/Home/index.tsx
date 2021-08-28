@@ -10,7 +10,11 @@ type Props = {
     isLoadingTags: boolean
     tags: Entities.Tag[]
     articles: Entities.Article[]
+    selectedTab: string
+    hashTag: Entities.Tag | undefined
+    onChangeTab: (tab: string) => () => void
     onClickFavorite: (slug: Entities.Article['slug']) => () => void
+    onClickTag: (tag: Entities.Tag) => () => void
 }
 
 export const Home = (props: Props) => (
@@ -33,8 +37,14 @@ export const Home = (props: Props) => (
                                         <li className="nav-item">
                                             <DesignSystem.Link
                                                 className="nav-link"
-                                                isDisabled
-                                                href=""
+                                                href="/"
+                                                isActive={
+                                                    props.selectedTab ===
+                                                    'Your Feed'
+                                                }
+                                                onClick={props.onChangeTab(
+                                                    'Your Feed'
+                                                )}
                                             >
                                                 Your Feed
                                             </DesignSystem.Link>
@@ -44,12 +54,35 @@ export const Home = (props: Props) => (
                                 <li className="nav-item">
                                     <DesignSystem.Link
                                         className="nav-link"
-                                        isActive
-                                        href=""
+                                        isActive={
+                                            props.selectedTab === 'Global Feed'
+                                        }
+                                        href="/"
+                                        onClick={props.onChangeTab(
+                                            'Global Feed'
+                                        )}
                                     >
                                         Global Feed
                                     </DesignSystem.Link>
                                 </li>
+                                {props.hashTag && (
+                                    <li className="nav-item">
+                                        <DesignSystem.Link
+                                            className="nav-link"
+                                            isActive={
+                                                props.selectedTab ===
+                                                props.hashTag
+                                            }
+                                            href="/"
+                                            onClick={props.onChangeTab(
+                                                'global'
+                                            )}
+                                        >
+                                            <i className="ion-pound"></i>
+                                            {props.hashTag}
+                                        </DesignSystem.Link>
+                                    </li>
+                                )}
                             </ul>
                         </div>
                         {props.isLoadingArticles
@@ -112,7 +145,10 @@ export const Home = (props: Props) => (
                             ) : (
                                 <div className="tag-list">
                                     {props.tags.map(tag => (
-                                        <DesignSystem.Tag href={`?tag=${tag}`}>
+                                        <DesignSystem.Tag
+                                            href="/"
+                                            onClick={props.onClickTag(tag)}
+                                        >
                                             {tag}
                                         </DesignSystem.Tag>
                                     ))}

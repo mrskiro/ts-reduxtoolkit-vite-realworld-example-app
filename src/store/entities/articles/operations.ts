@@ -1,14 +1,15 @@
 import * as Reduxtoolkit from '@reduxjs/toolkit'
 import * as Store from '~/store'
 import * as Entities from '~/entities'
+import * as Api from '~/api'
 
 export const getArticles = Reduxtoolkit.createAsyncThunk<
     Record<Entities.Article['slug'], Entities.Article>,
-    void,
+    Api.GetArticlesParameters,
     Store.AsyncThunkConfig
->('articles/getArticles', async (_arg, thunkAPI) => {
+>('articles/getArticles', async (arg, thunkAPI) => {
     try {
-        const response = await thunkAPI.extra.api.article.getArticles()
+        const response = await thunkAPI.extra.api.article.getArticles(arg)
         const articles: Record<Entities.Article['slug'], Entities.Article> =
             response.data.articles.reduce(
                 (prev, current) => ({
