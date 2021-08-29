@@ -7,7 +7,6 @@ import * as Store from '~/store'
 import '@testing-library/jest-dom'
 
 import { Login } from '../'
-import { waitFor } from '~/__tests__/utils'
 
 const server = Node.setupServer(Api.login)
 
@@ -55,7 +54,7 @@ describe('Login Page', () => {
             Rtl.screen.getByRole('button', { name: /Sign in/i })
         )
 
-        await waitFor(() =>
+        await Rtl.waitFor(() =>
             expect(history.location.pathname).toStrictEqual('/')
         )
     })

@@ -5,7 +5,6 @@ export const register = rest.post(
     Modules.makePath('/users'),
     (req, res, ctx) => {
         sessionStorage.setItem('is-authenticated', 'true')
-        console.log(req, res, ctx)
         return res(
             ctx.status(200),
             ctx.json({

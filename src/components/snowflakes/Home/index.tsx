@@ -79,7 +79,7 @@ export const Home = (props: Props) => (
                                                 'global'
                                             )}
                                         >
-                                            <i className="ion-pound"></i>
+                                            <i className="ion-pound"></i>{' '}
                                             {props.hashTag}
                                         </DesignSystem.Link>
                                     </li>
