@@ -81,8 +81,10 @@ export const getArticlesFeed = rest.get(
 )
 
 export const favorite = rest.post(
-    Modules.makePath('/articles/feed'),
+    Modules.makePath('/articles/:slug/favorite'),
     (req, res, ctx) => {
+        const { slug } = req.params
+
         return res(
             ctx.status(200),
             ctx.json({

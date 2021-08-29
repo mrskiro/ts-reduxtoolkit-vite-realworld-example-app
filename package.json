@@ -6,7 +6,8 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "lint": "eslint 'src/**/*{ts,tsx}'",
-    "test": "jest"
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.6.1",
