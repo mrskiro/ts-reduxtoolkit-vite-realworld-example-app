@@ -106,7 +106,10 @@ export const Profile = (props: Props) => (
                                 </div>
                             ) : (
                                 props.articles.map(article => (
-                                    <div className="article-preview">
+                                    <div
+                                        className="article-preview"
+                                        key={article.slug}
+                                    >
                                         <div className="article-meta">
                                             <DesignSystem.Link href="">
                                                 <img
@@ -129,7 +132,12 @@ export const Profile = (props: Props) => (
                                             </div>
                                             <DesignSystem.Button
                                                 size="sm"
-                                                className="btn-outline-primary pull-xs-right"
+                                                variant={
+                                                    article.favorited
+                                                        ? 'primary'
+                                                        : 'outline-primary'
+                                                }
+                                                className="pull-xs-right"
                                                 onClick={props.onClickFavorite(
                                                     article.slug
                                                 )}

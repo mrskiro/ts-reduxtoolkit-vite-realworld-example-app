@@ -23,7 +23,7 @@ export const getArticles = async (
     const response = await Modules.apiInstance.get<
         void,
         AxiosResponse<GetArticlesResponse>
-    >(endpoint)
+    >(endpoint, { headers: Modules.makeHeaders() })
 
     return response
 }
@@ -35,7 +35,7 @@ export const getArticlesFeed = async (
     const response = await Modules.apiInstance.get<
         void,
         AxiosResponse<GetArticlesResponse>
-    >(endpoint, { headers: Modules.authHeaders })
+    >(endpoint, { headers: Modules.makeHeaders() })
 
     return response
 }
@@ -50,7 +50,7 @@ export const favorite = async (
     const response = await Modules.apiInstance.post<
         void,
         AxiosResponse<FavoriteResponse>
-    >(`articles/${slug}/favorite`, {}, { headers: Modules.authHeaders })
+    >(`articles/${slug}/favorite`, {}, { headers: Modules.makeHeaders() })
 
     return response
 }

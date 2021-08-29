@@ -2,9 +2,9 @@ import axios from 'axios'
 
 const endpoint = 'https://conduit.productionready.io/api'
 
-const token = localStorage.getItem('token')
-export const authHeaders = {
-    Authorization: `Token ${token}`
+export const makeHeaders = () => {
+    const token = localStorage.getItem('token')
+    return { Authorization: token ? `Token ${token}` : '' }
 }
 
 export const apiInstance = axios.create({

@@ -94,7 +94,10 @@ export const Home = (props: Props) => (
                             </div>
                         ) : (
                             props.articles.map(article => (
-                                <div className="article-preview">
+                                <div
+                                    className="article-preview"
+                                    key={article.slug}
+                                >
                                     <div className="article-meta">
                                         <DesignSystem.Link
                                             href={`/profile/${article.author.username}`}
@@ -141,8 +144,11 @@ export const Home = (props: Props) => (
                                         <p>{article.description}</p>
                                         <span>Read more...</span>
                                         <ul className="tag-list">
-                                            {article.tagList.map(tag => (
-                                                <li className="tag-default tag-pill tag-outline">
+                                            {article.tagList.map((tag, i) => (
+                                                <li
+                                                    className="tag-default tag-pill tag-outline"
+                                                    key={i}
+                                                >
                                                     {tag}
                                                 </li>
                                             ))}
@@ -161,10 +167,11 @@ export const Home = (props: Props) => (
                                 'Loading tags...'
                             ) : (
                                 <div className="tag-list">
-                                    {props.tags.map(tag => (
+                                    {props.tags.map((tag, i) => (
                                         <DesignSystem.Tag
                                             href="/"
                                             onClick={props.onClickTag(tag)}
+                                            key={i}
                                         >
                                             {tag}
                                         </DesignSystem.Tag>

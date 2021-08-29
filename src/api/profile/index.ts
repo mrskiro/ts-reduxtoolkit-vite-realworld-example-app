@@ -27,7 +27,7 @@ export const follow = async (
     const response = await Modules.apiInstance.post<
         void,
         AxiosResponse<FollowResponse>
-    >(`profiles/${username}/follow`, {}, { headers: Modules.authHeaders })
+    >(`profiles/${username}/follow`, {}, { headers: Modules.makeHeaders() })
 
     return response
 }
@@ -42,7 +42,7 @@ export const unFollow = async (
     const response = await Modules.apiInstance.delete<
         void,
         AxiosResponse<UnFollowResponse>
-    >(`profiles/${username}/follow`, { headers: Modules.authHeaders })
+    >(`profiles/${username}/follow`, { headers: Modules.makeHeaders() })
 
     return response
 }
