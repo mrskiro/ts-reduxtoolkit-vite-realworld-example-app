@@ -20,10 +20,10 @@ export const getArticles = async (
     parameters: GetArticlesParameters = {}
 ): Promise<AxiosResponse<GetArticlesResponse>> => {
     const endpoint = `articles?${Modules.toQueryString(parameters)}`
-    const response = await Modules.apiInstance.get<
+    const response = await Modules.apiInstance().get<
         void,
         AxiosResponse<GetArticlesResponse>
-    >(endpoint, { headers: Modules.makeHeaders() })
+    >(endpoint)
 
     return response
 }
@@ -32,10 +32,10 @@ export const getArticlesFeed = async (
     parameters: GetArticlesParameters = {}
 ): Promise<AxiosResponse<GetArticlesResponse>> => {
     const endpoint = `articles/feed?${Modules.toQueryString(parameters)}`
-    const response = await Modules.apiInstance.get<
+    const response = await Modules.apiInstance().get<
         void,
         AxiosResponse<GetArticlesResponse>
-    >(endpoint, { headers: Modules.makeHeaders() })
+    >(endpoint)
 
     return response
 }
@@ -47,10 +47,21 @@ type FavoriteResponse = {
 export const favorite = async (
     slug: Entities.Article['slug']
 ): Promise<AxiosResponse<FavoriteResponse>> => {
-    const response = await Modules.apiInstance.post<
+    const response = await Modules.apiInstance().post<
         void,
         AxiosResponse<FavoriteResponse>
-    >(`articles/${slug}/favorite`, {}, { headers: Modules.makeHeaders() })
+    >(`articles/${slug}/favorite`)
+
+    return response
+}
+
+export const unFavorite = async (
+    slug: Entities.Article['slug']
+): Promise<AxiosResponse<FavoriteResponse>> => {
+    const response = await Modules.apiInstance().delete<
+        void,
+        AxiosResponse<FavoriteResponse>
+    >(`articles/${slug}/favorite`)
 
     return response
 }

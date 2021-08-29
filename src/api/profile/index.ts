@@ -9,10 +9,10 @@ type GetProfileResponse = {
 export const getProfile = async (
     username: Entities.Profile['username']
 ): Promise<AxiosResponse<GetProfileResponse>> => {
-    const response = await Modules.apiInstance.get<
+    const response = await Modules.apiInstance().get<
         void,
         AxiosResponse<GetProfileResponse>
-    >(`profiles/${username}`, { headers: Modules.makeHeaders() })
+    >(`profiles/${username}`)
 
     return response
 }
@@ -24,10 +24,10 @@ type FollowResponse = {
 export const follow = async (
     username: Entities.Profile['username']
 ): Promise<AxiosResponse<FollowResponse>> => {
-    const response = await Modules.apiInstance.post<
+    const response = await Modules.apiInstance().post<
         void,
         AxiosResponse<FollowResponse>
-    >(`profiles/${username}/follow`, {}, { headers: Modules.makeHeaders() })
+    >(`profiles/${username}/follow`)
 
     return response
 }
@@ -39,10 +39,10 @@ type UnFollowResponse = {
 export const unFollow = async (
     username: Entities.Profile['username']
 ): Promise<AxiosResponse<UnFollowResponse>> => {
-    const response = await Modules.apiInstance.delete<
+    const response = await Modules.apiInstance().delete<
         void,
         AxiosResponse<UnFollowResponse>
-    >(`profiles/${username}/follow`, { headers: Modules.makeHeaders() })
+    >(`profiles/${username}/follow`)
 
     return response
 }

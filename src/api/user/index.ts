@@ -11,7 +11,7 @@ type RegisterArg = {
 export const register = async (
     arg: RegisterArg
 ): Promise<AxiosResponse<{ user: Entities.Me }>> => {
-    const response = await Modules.apiInstance.post<
+    const response = await Modules.apiInstance().post<
         RegisterArg,
         AxiosResponse<{ user: Entities.Me }>
     >('users', { user: arg })
@@ -25,7 +25,7 @@ type LoginArg = {
 }
 
 export const login = async (arg: LoginArg) => {
-    const response = await Modules.apiInstance.post<
+    const response = await Modules.apiInstance().post<
         LoginArg,
         AxiosResponse<{ user: Entities.Me }>
     >('users/login', { user: arg })
@@ -34,10 +34,10 @@ export const login = async (arg: LoginArg) => {
 }
 
 export const getMe = async () => {
-    const response = await Modules.apiInstance.get<
+    const response = await Modules.apiInstance().get<
         LoginArg,
         AxiosResponse<{ user: Entities.Me }>
-    >('user', { headers: Modules.makeHeaders() })
+    >('user')
 
     return response
 }

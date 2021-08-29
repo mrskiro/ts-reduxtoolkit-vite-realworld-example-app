@@ -7,9 +7,11 @@ export const makeHeaders = () => {
     return { Authorization: token ? `Token ${token}` : '' }
 }
 
-export const apiInstance = axios.create({
-    baseURL: endpoint
-})
+export const apiInstance = () =>
+    axios.create({
+        baseURL: endpoint,
+        headers: makeHeaders()
+    })
 
 export const toQueryString = <T, U>(obj: Partial<Record<keyof T, U>>): string =>
     Object.entries(obj)
