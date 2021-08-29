@@ -7,5 +7,6 @@ export const handlers = [
     Api.getTags,
     Api.getArticles,
     Api.getArticlesFeed,
-    Api.favorite
+    Api.favorite,
+    Api.unFavorite
 ]

@@ -13,6 +13,7 @@ const server = Node.setupServer(
     Api.getArticles,
     Api.getArticlesFeed,
     Api.favorite,
+    Api.unFavorite,
     Api.getUser
 )
 
@@ -75,22 +76,27 @@ describe('Home Page', () => {
         const buttons = Rtl.screen.getAllByRole('button', { name: '0' })
         expect(buttons.length).toBe(2)
 
+        // favorite
         Rtl.fireEvent.click(buttons[0])
-
         await Rtl.screen.findByRole('button', { name: '1' })
-        expect(Rtl.screen.getAllByRole('button', { name: '0' }).length).toBe(1)
-    })
 
-    it('Should favorite article', async () => {
-        Rtl.render(<Home />, preloadedState)
-        await Rtl.screen.findAllByText('Read more...')
-        const buttons = Rtl.screen.getAllByRole('button', { name: '0' })
-        expect(buttons.length).toBe(2)
+        await Rtl.waitFor(() => {
+            expect(
+                Rtl.screen.getAllByRole('button', { name: '0' }).length
+            ).toBe(1)
+            expect(
+                Rtl.screen.getAllByRole('button', { name: '1' }).length
+            ).toBe(1)
+        })
 
-        Rtl.fireEvent.click(buttons[0])
+        // unFavorite
+        Rtl.fireEvent.click(Rtl.screen.getAllByRole('button', { name: '1' })[0])
 
-        await Rtl.screen.findByRole('button', { name: '1' })
-        expect(Rtl.screen.getAllByRole('button', { name: '0' }).length).toBe(1)
+        await Rtl.waitFor(() =>
+            expect(
+                Rtl.screen.getAllByRole('button', { name: '0' }).length
+            ).toBe(2)
+        )
     })
 
     it('Should redirect to login on favorite if the user is not sign in', async () => {
