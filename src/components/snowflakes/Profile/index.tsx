@@ -16,6 +16,7 @@ type Props = {
     onClickUnFollow: () => void
     onChangeTab: (tab: 'My Articles' | 'Favorited Articles') => () => void
     onClickFavorite: (slug: Entities.Article['slug']) => () => void
+    onClickUnFavorite: (slug: Entities.Article['slug']) => () => void
 }
 
 export const Profile = (props: Props) => (
@@ -130,21 +131,31 @@ export const Profile = (props: Props) => (
                                                     )}
                                                 </span>
                                             </div>
-                                            <DesignSystem.Button
-                                                size="sm"
-                                                variant={
-                                                    article.favorited
-                                                        ? 'primary'
-                                                        : 'outline-primary'
-                                                }
-                                                className="pull-xs-right"
-                                                onClick={props.onClickFavorite(
-                                                    article.slug
-                                                )}
-                                            >
-                                                <i className="ion-heart"></i>{' '}
-                                                {article.favoritesCount}
-                                            </DesignSystem.Button>
+                                            {article.favorited ? (
+                                                <DesignSystem.Button
+                                                    size="sm"
+                                                    variant="primary"
+                                                    className="pull-xs-right"
+                                                    onClick={props.onClickUnFavorite(
+                                                        article.slug
+                                                    )}
+                                                >
+                                                    <i className="ion-heart"></i>{' '}
+                                                    {article.favoritesCount}
+                                                </DesignSystem.Button>
+                                            ) : (
+                                                <DesignSystem.Button
+                                                    size="sm"
+                                                    variant="outline-primary"
+                                                    className="pull-xs-right"
+                                                    onClick={props.onClickFavorite(
+                                                        article.slug
+                                                    )}
+                                                >
+                                                    <i className="ion-heart"></i>{' '}
+                                                    {article.favoritesCount}
+                                                </DesignSystem.Button>
+                                            )}
                                         </div>
                                         <DesignSystem.Link
                                             href=""
@@ -154,11 +165,16 @@ export const Profile = (props: Props) => (
                                             <p>{article.description}</p>
                                             <span>Read more...</span>
                                             <ul className="tag-list">
-                                                {article.tagList.map(tag => (
-                                                    <li className="tag-default tag-pill tag-outline">
-                                                        {tag}
-                                                    </li>
-                                                ))}
+                                                {article.tagList.map(
+                                                    (tag, i) => (
+                                                        <li
+                                                            className="tag-default tag-pill tag-outline"
+                                                            key={i}
+                                                        >
+                                                            {tag}
+                                                        </li>
+                                                    )
+                                                )}
                                             </ul>
                                         </DesignSystem.Link>
                                     </div>

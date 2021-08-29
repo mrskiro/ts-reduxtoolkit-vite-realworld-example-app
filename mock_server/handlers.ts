@@ -8,5 +8,8 @@ export const handlers = [
     Api.getArticles,
     Api.getArticlesFeed,
     Api.favorite,
-    Api.unFavorite
+    Api.unFavorite,
+    Api.getProfile,
+    Api.follow,
+    Api.unFollow
 ]

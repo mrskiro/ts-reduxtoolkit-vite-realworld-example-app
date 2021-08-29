@@ -61,6 +61,10 @@ export const Profile = () => {
         dispatch(Articles.favorite({ slug }))
     }
 
+    const onClickUnFavorite = (slug: Entities.Article['slug']) => () => {
+        dispatch(Articles.unFavorite({ slug }))
+    }
+
     const onChangeTab = (tab: 'My Articles' | 'Favorited Articles') => () => {
         dispatch(Ui.actions.onChangeTab(tab))
         tab === 'My Articles'
@@ -81,6 +85,7 @@ export const Profile = () => {
             onClickUnFollow={onClickUnFollow}
             onChangeTab={onChangeTab}
             onClickFavorite={onClickFavorite}
+            onClickUnFavorite={onClickUnFavorite}
         />
     )
 }
