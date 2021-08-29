@@ -12,7 +12,7 @@ export const getProfile = async (
     const response = await Modules.apiInstance.get<
         void,
         AxiosResponse<GetProfileResponse>
-    >(`profiles/${username}`)
+    >(`profiles/${username}`, { headers: Modules.makeHeaders() })
 
     return response
 }
