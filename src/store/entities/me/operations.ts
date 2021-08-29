@@ -39,3 +39,17 @@ export const login = Reduxtoolkit.createAsyncThunk<
         return thunkAPI.rejectWithValue(error)
     }
 })
+
+export const getMe = Reduxtoolkit.createAsyncThunk<
+    Entities.Me,
+    void,
+    Store.AsyncThunkConfig
+>('entities/me/getMe', async (_arg, thunkAPI) => {
+    try {
+        const response = await thunkAPI.extra.api.me.getMe()
+
+        return response.data.user
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error)
+    }
+})

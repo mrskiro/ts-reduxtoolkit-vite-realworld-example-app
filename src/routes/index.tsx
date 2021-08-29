@@ -7,17 +7,23 @@ import { Setting } from '~/pages/Setting'
 import { Profile } from '~/pages/Profile'
 import { Editor } from '~/pages/Editor'
 import { Article } from '~/pages/Article'
+import { AuthRoute } from '~/routes/AuthRoute'
 
 export const Route = () => (
     <ReactRouter.HashRouter>
-        <ReactRouter.Switch>
-            <ReactRouter.Route path="/article/:slug" component={Article} />
-            <ReactRouter.Route path="/profile/:username" component={Profile} />
-            <ReactRouter.Route path="/editor" component={Editor} />
-            <ReactRouter.Route path="/settings" component={Setting} />
-            <ReactRouter.Route path="/register" component={Register} />
-            <ReactRouter.Route path="/login" component={Login} />
-            <ReactRouter.Route exact={true} path="/" component={Home} />
-        </ReactRouter.Switch>
+        <AuthRoute>
+            <ReactRouter.Switch>
+                <ReactRouter.Route path="/article/:slug" component={Article} />
+                <ReactRouter.Route
+                    path="/profile/:username"
+                    component={Profile}
+                />
+                <ReactRouter.Route path="/editor" component={Editor} />
+                <ReactRouter.Route path="/settings" component={Setting} />
+                <ReactRouter.Route path="/register" component={Register} />
+                <ReactRouter.Route path="/login" component={Login} />
+                <ReactRouter.Route exact={true} path="/" component={Home} />
+            </ReactRouter.Switch>
+        </AuthRoute>
     </ReactRouter.HashRouter>
 )

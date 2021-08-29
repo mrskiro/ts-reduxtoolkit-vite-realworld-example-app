@@ -38,6 +38,13 @@ const slice = Reduxtoolkit.createSlice({
             state.status = Status.fullfiled
             state.data = action.payload
         })
+        builder.addCase(Operations.getMe.pending, state => {
+            state.status = Status.pending
+        })
+        builder.addCase(Operations.getMe.fulfilled, (state, action) => {
+            state.status = Status.fullfiled
+            state.data = action.payload
+        })
     }
 })
 

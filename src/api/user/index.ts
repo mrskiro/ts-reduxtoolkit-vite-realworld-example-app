@@ -32,3 +32,12 @@ export const login = async (arg: LoginArg) => {
 
     return response
 }
+
+export const getMe = async () => {
+    const response = await Modules.apiInstance.get<
+        LoginArg,
+        AxiosResponse<{ user: Entities.Me }>
+    >('user', { headers: Modules.authHeaders })
+
+    return response
+}
