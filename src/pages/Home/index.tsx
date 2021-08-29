@@ -52,6 +52,10 @@ export const Home = () => {
         dispatch(Articles.favorite({ slug }))
     }
 
+    const onClickUnFavorite = (slug: Entities.Article['slug']) => () => {
+        dispatch(Articles.unFavorite({ slug }))
+    }
+
     const onChangeTab = (tab: string) => () => {
         dispatch(Ui.actions.onChangeTab(tab))
     }
@@ -71,6 +75,7 @@ export const Home = () => {
             hashTag={hashTag}
             onChangeTab={onChangeTab}
             onClickFavorite={onClickFavorite}
+            onClickUnFavorite={onClickUnFavorite}
             onClickTag={onClickTag}
         />
     )

@@ -15,6 +15,7 @@ type Props = {
     hashTag: Entities.Tag | undefined
     onChangeTab: (tab: string) => () => void
     onClickFavorite: (slug: Entities.Article['slug']) => () => void
+    onClickUnFavorite: (slug: Entities.Article['slug']) => () => void
     onClickTag: (tag: Entities.Tag) => () => void
 }
 
@@ -120,21 +121,31 @@ export const Home = (props: Props) => (
                                                 )}
                                             </span>
                                         </div>
-                                        <DesignSystem.Button
-                                            size="sm"
-                                            variant={
-                                                article.favorited
-                                                    ? 'primary'
-                                                    : 'outline-primary'
-                                            }
-                                            className="pull-xs-right"
-                                            onClick={props.onClickFavorite(
-                                                article.slug
-                                            )}
-                                        >
-                                            <i className="ion-heart"></i>{' '}
-                                            {article.favoritesCount}
-                                        </DesignSystem.Button>
+                                        {article.favorited ? (
+                                            <DesignSystem.Button
+                                                size="sm"
+                                                variant="primary"
+                                                className="pull-xs-right"
+                                                onClick={props.onClickUnFavorite(
+                                                    article.slug
+                                                )}
+                                            >
+                                                <i className="ion-heart"></i>{' '}
+                                                {article.favoritesCount}
+                                            </DesignSystem.Button>
+                                        ) : (
+                                            <DesignSystem.Button
+                                                size="sm"
+                                                variant="outline-primary"
+                                                className="pull-xs-right"
+                                                onClick={props.onClickFavorite(
+                                                    article.slug
+                                                )}
+                                            >
+                                                <i className="ion-heart"></i>{' '}
+                                                {article.favoritesCount}
+                                            </DesignSystem.Button>
+                                        )}
                                     </div>
                                     <DesignSystem.Link
                                         href=""

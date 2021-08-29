@@ -35,8 +35,13 @@ const slice = Reduxtoolkit.createSlice({
                 state.data = action.payload
             }
         )
-        builder.addCase(Operations.favorite.pending, () => {})
         builder.addCase(Operations.favorite.fulfilled, (state, action) => {
+            state.data = {
+                ...state.data,
+                [action.payload.slug]: action.payload
+            }
+        })
+        builder.addCase(Operations.unFavorite.fulfilled, (state, action) => {
             state.data = {
                 ...state.data,
                 [action.payload.slug]: action.payload
