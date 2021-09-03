@@ -15,7 +15,7 @@ const initialState: State = {
         email: '',
         bio: '',
         token: '',
-        image: null
+        image: undefined
     }
 }
 
@@ -42,6 +42,13 @@ const slice = Reduxtoolkit.createSlice({
             state.status = Status.pending
         })
         builder.addCase(Operations.getMe.fulfilled, (state, action) => {
+            state.status = Status.fullfiled
+            state.data = action.payload
+        })
+        builder.addCase(Operations.updateMe.pending, state => {
+            state.status = Status.pending
+        })
+        builder.addCase(Operations.updateMe.fulfilled, (state, action) => {
             state.status = Status.fullfiled
             state.data = action.payload
         })

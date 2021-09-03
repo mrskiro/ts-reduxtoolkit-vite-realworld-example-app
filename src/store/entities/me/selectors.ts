@@ -8,3 +8,23 @@ export const selectIsFullfiled = ReduxToolkit.createSelector(
     selectState,
     state => state.status === Status.Status.fullfiled
 )
+
+export const selectUsername = ReduxToolkit.createSelector(
+    selectState,
+    state => state.data.username
+)
+
+export const selectEmail = ReduxToolkit.createSelector(
+    selectState,
+    state => state.data.email
+)
+
+export const selectBio = ReduxToolkit.createSelector(
+    selectState,
+    state => state.data.bio
+)
+
+export const selectImage = ReduxToolkit.createSelector(
+    selectState,
+    state => state.data.image
+)

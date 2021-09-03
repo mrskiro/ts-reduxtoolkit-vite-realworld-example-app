@@ -3,5 +3,5 @@ export type Me = {
     email: string
     token: string
     bio: string
-    image: null
+    image?: string
 }

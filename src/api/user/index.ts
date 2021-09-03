@@ -41,3 +41,12 @@ export const getMe = async () => {
 
     return response
 }
+
+export const updateMe = async (arg: Omit<Entities.Me, 'token'>) => {
+    const response = await Modules.apiInstance().put<
+        Entities.Me,
+        AxiosResponse<{ user: Entities.Me }>
+    >('user', { user: arg })
+
+    return response
+}

@@ -1,10 +1,10 @@
-import * as Reduxtoolkit from '@reduxjs/toolkit'
+import * as ReduxToolkit from '@reduxjs/toolkit'
 import * as History from 'history'
 import * as Store from '~/store'
 import * as Entities from '~/entities'
 
 // https://reactrouter.com/web/guides/deep-redux-integration
-export const register = Reduxtoolkit.createAsyncThunk<
+export const register = ReduxToolkit.createAsyncThunk<
     Entities.Me,
     {
         user: { name: string; email: string; password: string }
@@ -22,7 +22,7 @@ export const register = Reduxtoolkit.createAsyncThunk<
     }
 })
 
-export const login = Reduxtoolkit.createAsyncThunk<
+export const login = ReduxToolkit.createAsyncThunk<
     Entities.Me,
     {
         user: { email: string; password: string }
@@ -40,13 +40,27 @@ export const login = Reduxtoolkit.createAsyncThunk<
     }
 })
 
-export const getMe = Reduxtoolkit.createAsyncThunk<
+export const getMe = ReduxToolkit.createAsyncThunk<
     Entities.Me,
     void,
     Store.AsyncThunkConfig
 >('entities/me/getMe', async (_arg, thunkAPI) => {
     try {
         const response = await thunkAPI.extra.api.me.getMe()
+
+        return response.data.user
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error)
+    }
+})
+
+export const updateMe = ReduxToolkit.createAsyncThunk<
+    Entities.Me,
+    Omit<Entities.Me, 'token'>,
+    Store.AsyncThunkConfig
+>('entities/me/updateMe', async (arg, thunkAPI) => {
+    try {
+        const response = await thunkAPI.extra.api.me.updateMe(arg)
 
         return response.data.user
     } catch (error) {
