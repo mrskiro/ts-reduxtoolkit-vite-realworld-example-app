@@ -83,3 +83,16 @@ export const createArticle = async (
 
     return response
 }
+
+export const getArticle = async (
+    slug: Entities.Article['slug']
+): Promise<AxiosResponse<ArticleResponse>> => {
+    const response = await Modules.apiInstance().get<
+        void,
+        AxiosResponse<ArticleResponse>
+    >(`articles/${slug}`)
+
+    return response
+}
+
+export * from './comment'

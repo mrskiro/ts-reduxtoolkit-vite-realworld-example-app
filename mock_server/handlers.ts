@@ -13,5 +13,8 @@ export const handlers = [
     Api.getProfile,
     Api.follow,
     Api.unFollow,
-    Api.createArticle
+    Api.createArticle,
+    Api.getArticle,
+    Api.getComments,
+    Api.addComment
 ]
