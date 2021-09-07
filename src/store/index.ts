@@ -19,7 +19,8 @@ export const extraArgument = {
             getArticles: Api.getArticles,
             getArticlesFeed: Api.getArticlesFeed,
             favorite: Api.favorite,
-            unFavorite: Api.unFavorite
+            unFavorite: Api.unFavorite,
+            createArticles: Api.createArticle
         },
         profile: {
             getProfile: Api.getProfile,

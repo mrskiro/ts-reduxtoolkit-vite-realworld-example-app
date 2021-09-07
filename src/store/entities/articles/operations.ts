@@ -1,4 +1,5 @@
 import * as Reduxtoolkit from '@reduxjs/toolkit'
+import * as History from 'history'
 import * as Store from '~/store'
 import * as Entities from '~/entities'
 import * as Api from '~/api'
@@ -66,6 +67,30 @@ export const unFavorite = Reduxtoolkit.createAsyncThunk<
 >('entities/articles/unFavorite', async (arg, thunkAPI) => {
     try {
         const response = await thunkAPI.extra.api.article.unFavorite(arg.slug)
+
+        return response.data.article
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error)
+    }
+})
+
+export const createArticle = Reduxtoolkit.createAsyncThunk<
+    Entities.Article,
+    {
+        article: Pick<
+            Entities.Article,
+            'title' | 'body' | 'description' | 'tagList'
+        >
+        history: History.History
+    },
+    Store.AsyncThunkConfig
+>('entities/articles/createArticle', async (arg, thunkAPI) => {
+    try {
+        const response = await thunkAPI.extra.api.article.createArticles(
+            arg.article
+        )
+
+        arg.history.push(`/article/${response.data.article.slug}`)
 
         return response.data.article
     } catch (error) {

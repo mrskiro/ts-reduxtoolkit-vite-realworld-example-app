@@ -22,7 +22,7 @@ export const Route = () => (
                 <ReactRouter.Route path="/settings" component={Setting} />
                 <ReactRouter.Route path="/register" component={Register} />
                 <ReactRouter.Route path="/login" component={Login} />
-                <ReactRouter.Route exact={true} path="/" component={Home} />
+                <ReactRouter.Route exact path="/" component={Home} />
             </ReactRouter.Switch>
         </AuthRoute>
     </ReactRouter.HashRouter>

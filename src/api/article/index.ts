@@ -65,3 +65,21 @@ export const unFavorite = async (
 
     return response
 }
+
+type ArticleResponse = {
+    article: Entities.Article
+}
+
+export const createArticle = async (
+    article: Pick<
+        Entities.Article,
+        'title' | 'body' | 'description' | 'tagList'
+    >
+): Promise<AxiosResponse<ArticleResponse>> => {
+    const response = await Modules.apiInstance().post<
+        void,
+        AxiosResponse<ArticleResponse>
+    >(`articles`, { article })
+
+    return response
+}

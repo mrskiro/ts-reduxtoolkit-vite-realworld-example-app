@@ -1,10 +1,13 @@
 import * as React from 'react'
 import * as DesignSystem from '~/components/designSystem'
 
-type Props = React.ComponentPropsWithoutRef<typeof DesignSystem.Input>
+type Props = React.ComponentPropsWithoutRef<typeof DesignSystem.Input> & {
+    children?: React.ReactNode
+}
 
-export const InputField = (props: Props) => (
+export const InputField = ({ children, ...restProps }: Props) => (
     <fieldset className="form-group">
-        <DesignSystem.Input {...props} />
+        <DesignSystem.Input {...restProps} />
+        {children}
     </fieldset>
 )

@@ -1,5 +1,6 @@
 import { rest } from 'msw'
 import * as Modules from '../../modules'
+import * as Entities from '../../../src/entities'
 
 export const getArticles = rest.get(
     Modules.makePath('/articles'),
@@ -169,6 +170,36 @@ export const unFavorite = rest.delete(
                     description: 'Ever wonder how?',
                     body: 'It takes a Jacobian',
                     tagList: ['dragons', 'training'],
+                    createdAt: '2016-02-18T03:22:56.637Z',
+                    updatedAt: '2016-02-18T03:48:35.824Z',
+                    favorited: false,
+                    favoritesCount: 0,
+                    author: {
+                        username: 'jake',
+                        bio: 'I work at statefarm',
+                        image: 'https://i.stack.imgur.com/xHWG8.jpg',
+                        following: false
+                    }
+                }
+            })
+        )
+    }
+)
+
+export const createArticle = rest.post<{ article: Entities.Article }>(
+    Modules.makePath('/articles'),
+    (req, res, ctx) => {
+        const article = req.body.article
+
+        return res(
+            ctx.status(200),
+            ctx.json({
+                article: {
+                    slug: 'how-to-train-your-dragon',
+                    title: article.title,
+                    description: article.description,
+                    body: article.body,
+                    tagList: [...article.tagList],
                     createdAt: '2016-02-18T03:22:56.637Z',
                     updatedAt: '2016-02-18T03:48:35.824Z',
                     favorited: false,

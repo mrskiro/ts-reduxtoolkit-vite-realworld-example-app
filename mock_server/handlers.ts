@@ -12,5 +12,6 @@ export const handlers = [
     Api.unFavorite,
     Api.getProfile,
     Api.follow,
-    Api.unFollow
+    Api.unFollow,
+    Api.createArticle
 ]
