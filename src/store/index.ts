@@ -20,7 +20,12 @@ export const extraArgument = {
             getArticlesFeed: Api.getArticlesFeed,
             favorite: Api.favorite,
             unFavorite: Api.unFavorite,
-            createArticles: Api.createArticle
+            createArticles: Api.createArticle,
+            getArticle: Api.getArticle,
+            comments: {
+                getComments: Api.getComments,
+                addComment: Api.addComment
+            }
         },
         profile: {
             getProfile: Api.getProfile,

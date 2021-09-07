@@ -2,38 +2,59 @@ import * as React from 'react'
 import * as DesignSystem from '~/components/designSystem'
 import * as Recipes from '~/components/recipes'
 import { Main } from '~/components/layouts/Main'
+import * as Entities from '~/entities'
 
-export const Article = () => (
-    <Main>
+type Props = {
+    username: Entities.Me['username']
+    myImage: Entities.Me['image']
+    article: Entities.Article
+    comments: Entities.Comment[]
+    onClickFollow: () => void
+    onClickUnFollow: () => void
+    onClickFavorite: () => void
+    onClickUnFavorite: () => void
+    onSubmitComment: (
+        e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    ) => void
+}
+
+export const Article = (props: Props) => (
+    <Main isGetMe={false}>
         <div className="article-page">
             <DesignSystem.Banner>
-                <h1>How to build webapps that scale</h1>
+                <h1>{props.article.title}</h1>
                 <div className="article-meta">
-                    <DesignSystem.Link href="">
-                        <img src="http://i.imgur.com/Qr71crq.jpg" />
+                    <DesignSystem.Link
+                        href={`/${props.article.author.username}`}
+                    >
+                        <img src={props.article.author.image} />
                     </DesignSystem.Link>
                     <div className="info">
                         <DesignSystem.Link href="" className="author">
-                            Eric Simons
+                            {props.article.author.username}
                         </DesignSystem.Link>
-                        <span className="date">January 20th</span>
+                        <span className="date">{props.article.createdAt}</span>
                     </div>
                     <DesignSystem.Button
                         size="sm"
                         className="btn-outline-secondary"
+                        onClick={props.onClickFollow}
                     >
                         <i className="ion-plus-round"></i>
-                        &nbsp; Follow Eric Simons{' '}
-                        <span className="counter">(10)</span>
+                        &nbsp; Follow {props.article.author.username}{' '}
+                        {/* <span className="counter">({props.article.favoritesCount})</span> */}
                     </DesignSystem.Button>
                     &nbsp;&nbsp;
                     <DesignSystem.Button
                         size="sm"
                         className="btn-outline-primary"
+                        onClick={props.onClickFavorite}
                     >
                         <i className="ion-heart"></i>
-                        &nbsp; Favorite Post{' '}
-                        <span className="counter">(29)</span>
+                        &nbsp; Favorite Article{' '}
+                        <span className="counter">
+                            ({props.article.favoritesCount})
+                        </span>
                     </DesignSystem.Button>
                 </div>
             </DesignSystem.Banner>
@@ -41,7 +62,10 @@ export const Article = () => (
             <div className="container page">
                 <div className="row article-content">
                     <div className="col-md-12">
-                        <p>
+                        <div>
+                            <p>{props.article.body}</p>
+                        </div>
+                        {/* <p>
                             Web development technologies have evolved at an
                             incredible clip over the past few years.
                         </p>
@@ -49,7 +73,17 @@ export const Article = () => (
                         <p>
                             It's a great solution for learning how other
                             frameworks work.
-                        </p>
+                        </p> */}
+                        <ul className="tag-list">
+                            {props.article.tagList.map(tag => (
+                                <li
+                                    key={tag}
+                                    className="tag-default tag-pill tag-outline"
+                                >
+                                    {tag}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
 
@@ -58,21 +92,26 @@ export const Article = () => (
                 <div className="article-actions">
                     <div className="article-meta">
                         <DesignSystem.Link href="profile.html">
-                            <img src="http://i.imgur.com/Qr71crq.jpg" />
+                            <img src={props.article.author.image} />
                         </DesignSystem.Link>
                         <div className="info">
-                            <DesignSystem.Link href="" className="author">
-                                Eric Simons
+                            <DesignSystem.Link
+                                href={`/${props.article.author.username}`}
+                                className="author"
+                            >
+                                {props.article.author.username}
                             </DesignSystem.Link>
-                            <span className="date">January 20th</span>
+                            <span className="date">
+                                {props.article.updatedAt}
+                            </span>
                         </div>
                         <DesignSystem.Button
                             size="sm"
                             className="btn-outline-secondary"
                         >
                             <i className="ion-plus-round"></i>
-                            &nbsp; Follow Eric Simons{' '}
-                            <span className="counter">(10)</span>
+                            &nbsp; Follow {props.article.author.username}{' '}
+                            {/* <span className="counter">(10)</span> */}
                         </DesignSystem.Button>
                         &nbsp;
                         <DesignSystem.Button
@@ -81,7 +120,9 @@ export const Article = () => (
                         >
                             <i className="ion-heart"></i>
                             &nbsp; Favorite Post{' '}
-                            <span className="counter">(29)</span>
+                            <span className="counter">
+                                ({props.article.favoritesCount})
+                            </span>
                         </DesignSystem.Button>
                     </div>
                 </div>
@@ -98,77 +139,55 @@ export const Article = () => (
                             </div>
                             <div className="card-footer">
                                 <img
-                                    src="http://i.imgur.com/Qr71crq.jpg"
+                                    src={props.myImage}
                                     className="comment-author-img"
                                 />
                                 <DesignSystem.Button
                                     size="sm"
                                     className="btn-primary"
+                                    onClick={props.onSubmitComment}
                                 >
                                     Post Comment
                                 </DesignSystem.Button>
                             </div>
                         </form>
 
-                        <div className="card">
-                            <div className="card-block">
-                                <p className="card-text">
-                                    With supporting text below as a natural
-                                    lead-in to additional content.
-                                </p>
+                        {props.comments.map(comment => (
+                            <div className="card">
+                                <div className="card-block">
+                                    <p className="card-text">{comment.body}</p>
+                                </div>
+                                <div className="card-footer">
+                                    <DesignSystem.Link
+                                        href=""
+                                        className="comment-author"
+                                    >
+                                        <img
+                                            src={comment.author.image}
+                                            className="comment-author-img"
+                                        />
+                                    </DesignSystem.Link>
+                                    &nbsp;
+                                    <DesignSystem.Link
+                                        href={`/${comment.author.username}`}
+                                        className="comment-author"
+                                    >
+                                        {comment.author.username}
+                                    </DesignSystem.Link>
+                                    <span className="date-posted">
+                                        {/* Dec 29th */}
+                                        {comment.updatedAt}
+                                    </span>
+                                    <span className="mod-options">
+                                        {/* <i className="ion-edit"></i> */}
+                                        {comment.author.username ===
+                                            props.username && (
+                                            <i className="ion-trash-a"></i>
+                                        )}
+                                    </span>
+                                </div>
                             </div>
-                            <div className="card-footer">
-                                <DesignSystem.Link
-                                    href=""
-                                    className="comment-author"
-                                >
-                                    <img
-                                        src="http://i.imgur.com/Qr71crq.jpg"
-                                        className="comment-author-img"
-                                    />
-                                </DesignSystem.Link>
-                                &nbsp;
-                                <DesignSystem.Link
-                                    href=""
-                                    className="comment-author"
-                                >
-                                    Jacob Schmidt
-                                </DesignSystem.Link>
-                                <span className="date-posted">Dec 29th</span>
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <div className="card-block">
-                                <p className="card-text">
-                                    With supporting text below as a natural
-                                    lead-in to additional content.
-                                </p>
-                            </div>
-                            <div className="card-footer">
-                                <DesignSystem.Link
-                                    href=""
-                                    className="comment-author"
-                                >
-                                    <img
-                                        src="http://i.imgur.com/Qr71crq.jpg"
-                                        className="comment-author-img"
-                                    />
-                                </DesignSystem.Link>
-                                &nbsp;
-                                <DesignSystem.Link
-                                    href=""
-                                    className="comment-author"
-                                >
-                                    Jacob Schmidt
-                                </DesignSystem.Link>
-                                <span className="date-posted">Dec 29th</span>
-                                <span className="mod-options">
-                                    <i className="ion-edit"></i>
-                                    <i className="ion-trash-a"></i>
-                                </span>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>

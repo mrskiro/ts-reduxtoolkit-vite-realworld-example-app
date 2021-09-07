@@ -53,6 +53,12 @@ const slice = Reduxtoolkit.createSlice({
                 [action.payload.slug]: action.payload
             }
         })
+        builder.addCase(Operations.getArticle.fulfilled, (state, action) => {
+            state.data = {
+                ...state.data,
+                [action.payload.slug]: action.payload
+            }
+        })
     }
 })
 

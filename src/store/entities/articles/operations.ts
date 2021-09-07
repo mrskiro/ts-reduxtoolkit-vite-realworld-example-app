@@ -97,3 +97,18 @@ export const createArticle = Reduxtoolkit.createAsyncThunk<
         return thunkAPI.rejectWithValue(error)
     }
 })
+
+export const getArticle = Reduxtoolkit.createAsyncThunk<
+    Entities.Article,
+    {
+        slug: Entities.Article['slug']
+    },
+    Store.AsyncThunkConfig
+>('entities/articles/getArticle', async (arg, thunkAPI) => {
+    try {
+        const response = await thunkAPI.extra.api.article.getArticle(arg.slug)
+        return response.data.article
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error)
+    }
+})

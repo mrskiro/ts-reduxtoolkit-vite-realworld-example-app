@@ -7,6 +7,6 @@ import * as Profiles from '~/store/entities/profiles'
 export const reducer = Reduxtoolkit.combineReducers({
     me: Me.reducer,
     tags: Tags.reducer,
-    articles: Articles.reducer,
+    articles: Articles.articleReducer,
     profiles: Profiles.reducer
 })
