@@ -1,0 +1,364 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Snowflakes/Editor Default 1`] = `
+Array [
+  <nav
+    className="navbar navbar-light"
+  >
+    <div
+      className="container"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <ul
+        className="nav navbar-nav pull-xs-right"
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/editor"
+            onClick={[Function]}
+          >
+            <i
+              className="ion-compose"
+            />
+             New Post
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/settings"
+            onClick={[Function]}
+          >
+            <i
+              className="ion-gear-a"
+            />
+             Settings
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <main>
+    <div
+      className="editor-page"
+    >
+      <div
+        className="container page"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-md-10 offset-md-1 col-xs-12"
+          >
+            <form
+              onSubmit={[Function]}
+            >
+              <fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control form-control-lg"
+                    name="title"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Article Title"
+                    type="text"
+                    value=""
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control"
+                    name="description"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="What's this article about?"
+                    type="text"
+                    value=""
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <textarea
+                    className="form-control"
+                    name="body"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Write your article (in markdown)"
+                    rows={8}
+                    value=""
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control"
+                    onKeyPress={[Function]}
+                    placeholder="Enter tags"
+                    type="text"
+                  />
+                  <div
+                    className="tag-list"
+                  />
+                </fieldset>
+                <button
+                  className="btn btn-primary pull-xs-right btn-primary btn-lg"
+                  type="submit"
+                >
+                  Publish Article
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+  <footer>
+    <div
+      className="container"
+    >
+      <a
+        className="logo-font"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <span
+        className="attribution"
+      >
+        An interactive learning project from
+         
+        <a
+          href="https://thinkster.io"
+        >
+          Thinkster
+        </a>
+        . Code & design licensed under MIT.
+      </span>
+    </div>
+  </footer>,
+]
+`;
+
+exports[`Storyshots Snowflakes/Editor Edit 1`] = `
+Array [
+  <nav
+    className="navbar navbar-light"
+  >
+    <div
+      className="container"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <ul
+        className="nav navbar-nav pull-xs-right"
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/editor"
+            onClick={[Function]}
+          >
+            <i
+              className="ion-compose"
+            />
+             New Post
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/settings"
+            onClick={[Function]}
+          >
+            <i
+              className="ion-gear-a"
+            />
+             Settings
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <main>
+    <div
+      className="editor-page"
+    >
+      <div
+        className="container page"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-md-10 offset-md-1 col-xs-12"
+          >
+            <form
+              onSubmit={[Function]}
+            >
+              <fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control form-control-lg"
+                    name="title"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Article Title"
+                    type="text"
+                    value="How to train your dragon"
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control"
+                    name="description"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="What's this article about?"
+                    type="text"
+                    value="Ever wonder how?"
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <textarea
+                    className="form-control"
+                    name="body"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Write your article (in markdown)"
+                    rows={8}
+                    value="It takes a Jacobian"
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control"
+                    onKeyPress={[Function]}
+                    placeholder="Enter tags"
+                    type="text"
+                  />
+                  <div
+                    className="tag-list"
+                  >
+                    <span
+                      className="tag-pill tag-default"
+                    >
+                      <i
+                        className="ion-close-round"
+                      />
+                      dragons
+                    </span>
+                    <span
+                      className="tag-pill tag-default"
+                    >
+                      <i
+                        className="ion-close-round"
+                      />
+                      training
+                    </span>
+                  </div>
+                </fieldset>
+                <button
+                  className="btn btn-primary pull-xs-right btn-primary btn-lg"
+                  type="submit"
+                >
+                  Publish Article
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+  <footer>
+    <div
+      className="container"
+    >
+      <a
+        className="logo-font"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <span
+        className="attribution"
+      >
+        An interactive learning project from
+         
+        <a
+          href="https://thinkster.io"
+        >
+          Thinkster
+        </a>
+        . Code & design licensed under MIT.
+      </span>
+    </div>
+  </footer>,
+]
+`;
