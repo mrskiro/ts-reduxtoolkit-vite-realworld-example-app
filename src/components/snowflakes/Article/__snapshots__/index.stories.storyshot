@@ -1,0 +1,1126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Snowflakes/Article Default 1`] = `
+Array [
+  <nav
+    className="navbar navbar-light"
+  >
+    <div
+      className="container"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <ul
+        className="nav navbar-nav pull-xs-right"
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/login"
+            onClick={[Function]}
+          >
+            Sign in
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/register"
+            onClick={[Function]}
+          >
+            Sign up
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <main>
+    <div
+      className="article-page"
+    >
+      <div
+        className="banner"
+      >
+        <div
+          className="container"
+        >
+          <h1>
+            How to train your dragon
+          </h1>
+          <div
+            className="article-meta"
+          >
+            <a
+              className="undefined"
+              href="/jake"
+              onClick={[Function]}
+            >
+              <img
+                src="https://i.stack.imgur.com/xHWG8.jpg"
+              />
+            </a>
+            <div
+              className="info"
+            >
+              <a
+                className="author"
+                href="/"
+                onClick={[Function]}
+              >
+                jake
+              </a>
+              <span
+                className="date"
+              >
+                2016-02-18T03:22:56.637Z
+              </span>
+            </div>
+            <button
+              className="btn btn-primary btn-outline-secondary btn-sm"
+            >
+              <i
+                className="ion-plus-round"
+              />
+                Follow 
+              jake
+               
+            </button>
+              
+            <button
+              className="btn btn-primary btn-outline-primary btn-sm"
+            >
+              <i
+                className="ion-heart"
+              />
+                Favorite Article
+               
+              <span
+                className="counter"
+              >
+                (
+                0
+                )
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="container page"
+      >
+        <div
+          className="row article-content"
+        >
+          <div
+            className="col-md-12"
+          >
+            <div>
+              <p>
+                It takes a Jacobian
+              </p>
+            </div>
+            <ul
+              className="tag-list"
+            >
+              <li
+                className="tag-default tag-pill tag-outline"
+              >
+                dragons
+              </li>
+              <li
+                className="tag-default tag-pill tag-outline"
+              >
+                training
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div
+          className="article-actions"
+        >
+          <div
+            className="article-meta"
+          >
+            <a
+              className="undefined"
+              href="/profile.html"
+              onClick={[Function]}
+            >
+              <img
+                src="https://i.stack.imgur.com/xHWG8.jpg"
+              />
+            </a>
+            <div
+              className="info"
+            >
+              <a
+                className="author"
+                href="/jake"
+                onClick={[Function]}
+              >
+                jake
+              </a>
+              <span
+                className="date"
+              >
+                2016-02-18T03:48:35.824Z
+              </span>
+            </div>
+            <button
+              className="btn btn-primary btn-outline-secondary btn-sm"
+            >
+              <i
+                className="ion-plus-round"
+              />
+                Follow 
+              jake
+               
+            </button>
+             
+            <button
+              className="btn btn-primary btn-outline-primary btn-sm"
+            >
+              <i
+                className="ion-heart"
+              />
+                Favorite Post
+               
+              <span
+                className="counter"
+              >
+                (
+                0
+                )
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col-xs-12 col-md-8 offset-md-2"
+          >
+            <form
+              className="card comment-form"
+            >
+              <div
+                className="card-block"
+              >
+                <textarea
+                  className="form-control"
+                  placeholder="Write a comment..."
+                  rows={3}
+                />
+              </div>
+              <div
+                className="card-footer"
+              >
+                <img
+                  className="comment-author-img"
+                  src="https://i.stack.imgur.com/xHWG8.jpg"
+                />
+                <button
+                  className="btn btn-primary btn-primary btn-sm"
+                >
+                  Post Comment
+                </button>
+              </div>
+            </form>
+            <div
+              className="card"
+            >
+              <div
+                className="card-block"
+              >
+                <p
+                  className="card-text"
+                >
+                  It takes a Jacobian
+                </p>
+              </div>
+              <div
+                className="card-footer"
+              >
+                <a
+                  className="comment-author"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  <img
+                    className="comment-author-img"
+                    src="https://i.stack.imgur.com/xHWG8.jpg"
+                  />
+                </a>
+                 
+                <a
+                  className="comment-author"
+                  href="/jake"
+                  onClick={[Function]}
+                >
+                  jake
+                </a>
+                <span
+                  className="date-posted"
+                >
+                  2016-02-18T03:22:56.637Z
+                </span>
+                <span
+                  className="mod-options"
+                >
+                  <i
+                    className="ion-trash-a"
+                  />
+                </span>
+              </div>
+            </div>
+            <div
+              className="card"
+            >
+              <div
+                className="card-block"
+              >
+                <p
+                  className="card-text"
+                >
+                  It takes a Jacobian2
+                </p>
+              </div>
+              <div
+                className="card-footer"
+              >
+                <a
+                  className="comment-author"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  <img
+                    className="comment-author-img"
+                    src="https://i.stack.imgur.com/xHWG8.jpg"
+                  />
+                </a>
+                 
+                <a
+                  className="comment-author"
+                  href="/jake"
+                  onClick={[Function]}
+                >
+                  jake
+                </a>
+                <span
+                  className="date-posted"
+                >
+                  2016-02-18T03:22:56.637Z
+                </span>
+                <span
+                  className="mod-options"
+                >
+                  <i
+                    className="ion-trash-a"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+  <footer>
+    <div
+      className="container"
+    >
+      <a
+        className="logo-font"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <span
+        className="attribution"
+      >
+        An interactive learning project from
+         
+        <a
+          href="https://thinkster.io"
+        >
+          Thinkster
+        </a>
+        . Code & design licensed under MIT.
+      </span>
+    </div>
+  </footer>,
+]
+`;
+
+exports[`Storyshots Snowflakes/Article Favorited 1`] = `
+Array [
+  <nav
+    className="navbar navbar-light"
+  >
+    <div
+      className="container"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <ul
+        className="nav navbar-nav pull-xs-right"
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/login"
+            onClick={[Function]}
+          >
+            Sign in
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/register"
+            onClick={[Function]}
+          >
+            Sign up
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <main>
+    <div
+      className="article-page"
+    >
+      <div
+        className="banner"
+      >
+        <div
+          className="container"
+        >
+          <h1>
+            How to train your dragon
+          </h1>
+          <div
+            className="article-meta"
+          >
+            <a
+              className="undefined"
+              href="/jake"
+              onClick={[Function]}
+            >
+              <img
+                src="https://i.stack.imgur.com/xHWG8.jpg"
+              />
+            </a>
+            <div
+              className="info"
+            >
+              <a
+                className="author"
+                href="/"
+                onClick={[Function]}
+              >
+                jake
+              </a>
+              <span
+                className="date"
+              >
+                2016-02-18T03:22:56.637Z
+              </span>
+            </div>
+            <button
+              className="btn btn-primary btn-outline-secondary btn-sm"
+            >
+              <i
+                className="ion-plus-round"
+              />
+                Follow 
+              jake
+               
+            </button>
+              
+            <button
+              className="btn btn-primary btn-outline-primary btn-sm"
+            >
+              <i
+                className="ion-heart"
+              />
+                Favorite Article
+               
+              <span
+                className="counter"
+              >
+                (
+                1
+                )
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="container page"
+      >
+        <div
+          className="row article-content"
+        >
+          <div
+            className="col-md-12"
+          >
+            <div>
+              <p>
+                It takes a Jacobian
+              </p>
+            </div>
+            <ul
+              className="tag-list"
+            >
+              <li
+                className="tag-default tag-pill tag-outline"
+              >
+                dragons
+              </li>
+              <li
+                className="tag-default tag-pill tag-outline"
+              >
+                training
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div
+          className="article-actions"
+        >
+          <div
+            className="article-meta"
+          >
+            <a
+              className="undefined"
+              href="/profile.html"
+              onClick={[Function]}
+            >
+              <img
+                src="https://i.stack.imgur.com/xHWG8.jpg"
+              />
+            </a>
+            <div
+              className="info"
+            >
+              <a
+                className="author"
+                href="/jake"
+                onClick={[Function]}
+              >
+                jake
+              </a>
+              <span
+                className="date"
+              >
+                2016-02-18T03:48:35.824Z
+              </span>
+            </div>
+            <button
+              className="btn btn-primary btn-outline-secondary btn-sm"
+            >
+              <i
+                className="ion-plus-round"
+              />
+                Follow 
+              jake
+               
+            </button>
+             
+            <button
+              className="btn btn-primary btn-outline-primary btn-sm"
+            >
+              <i
+                className="ion-heart"
+              />
+                Favorite Post
+               
+              <span
+                className="counter"
+              >
+                (
+                1
+                )
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col-xs-12 col-md-8 offset-md-2"
+          >
+            <form
+              className="card comment-form"
+            >
+              <div
+                className="card-block"
+              >
+                <textarea
+                  className="form-control"
+                  placeholder="Write a comment..."
+                  rows={3}
+                />
+              </div>
+              <div
+                className="card-footer"
+              >
+                <img
+                  className="comment-author-img"
+                  src="https://i.stack.imgur.com/xHWG8.jpg"
+                />
+                <button
+                  className="btn btn-primary btn-primary btn-sm"
+                >
+                  Post Comment
+                </button>
+              </div>
+            </form>
+            <div
+              className="card"
+            >
+              <div
+                className="card-block"
+              >
+                <p
+                  className="card-text"
+                >
+                  It takes a Jacobian
+                </p>
+              </div>
+              <div
+                className="card-footer"
+              >
+                <a
+                  className="comment-author"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  <img
+                    className="comment-author-img"
+                    src="https://i.stack.imgur.com/xHWG8.jpg"
+                  />
+                </a>
+                 
+                <a
+                  className="comment-author"
+                  href="/jake"
+                  onClick={[Function]}
+                >
+                  jake
+                </a>
+                <span
+                  className="date-posted"
+                >
+                  2016-02-18T03:22:56.637Z
+                </span>
+                <span
+                  className="mod-options"
+                >
+                  <i
+                    className="ion-trash-a"
+                  />
+                </span>
+              </div>
+            </div>
+            <div
+              className="card"
+            >
+              <div
+                className="card-block"
+              >
+                <p
+                  className="card-text"
+                >
+                  It takes a Jacobian2
+                </p>
+              </div>
+              <div
+                className="card-footer"
+              >
+                <a
+                  className="comment-author"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  <img
+                    className="comment-author-img"
+                    src="https://i.stack.imgur.com/xHWG8.jpg"
+                  />
+                </a>
+                 
+                <a
+                  className="comment-author"
+                  href="/jake"
+                  onClick={[Function]}
+                >
+                  jake
+                </a>
+                <span
+                  className="date-posted"
+                >
+                  2016-02-18T03:22:56.637Z
+                </span>
+                <span
+                  className="mod-options"
+                >
+                  <i
+                    className="ion-trash-a"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+  <footer>
+    <div
+      className="container"
+    >
+      <a
+        className="logo-font"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <span
+        className="attribution"
+      >
+        An interactive learning project from
+         
+        <a
+          href="https://thinkster.io"
+        >
+          Thinkster
+        </a>
+        . Code & design licensed under MIT.
+      </span>
+    </div>
+  </footer>,
+]
+`;
+
+exports[`Storyshots Snowflakes/Article Followed 1`] = `
+Array [
+  <nav
+    className="navbar navbar-light"
+  >
+    <div
+      className="container"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <ul
+        className="nav navbar-nav pull-xs-right"
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/login"
+            onClick={[Function]}
+          >
+            Sign in
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/register"
+            onClick={[Function]}
+          >
+            Sign up
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <main>
+    <div
+      className="article-page"
+    >
+      <div
+        className="banner"
+      >
+        <div
+          className="container"
+        >
+          <h1>
+            How to train your dragon
+          </h1>
+          <div
+            className="article-meta"
+          >
+            <a
+              className="undefined"
+              href="/jake"
+              onClick={[Function]}
+            >
+              <img
+                src="https://i.stack.imgur.com/xHWG8.jpg"
+              />
+            </a>
+            <div
+              className="info"
+            >
+              <a
+                className="author"
+                href="/"
+                onClick={[Function]}
+              >
+                jake
+              </a>
+              <span
+                className="date"
+              >
+                2016-02-18T03:22:56.637Z
+              </span>
+            </div>
+            <button
+              className="btn btn-primary btn-outline-secondary btn-sm"
+            >
+              <i
+                className="ion-plus-round"
+              />
+                Follow 
+              jake
+               
+            </button>
+              
+            <button
+              className="btn btn-primary btn-outline-primary btn-sm"
+            >
+              <i
+                className="ion-heart"
+              />
+                Favorite Article
+               
+              <span
+                className="counter"
+              >
+                (
+                1
+                )
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="container page"
+      >
+        <div
+          className="row article-content"
+        >
+          <div
+            className="col-md-12"
+          >
+            <div>
+              <p>
+                It takes a Jacobian
+              </p>
+            </div>
+            <ul
+              className="tag-list"
+            >
+              <li
+                className="tag-default tag-pill tag-outline"
+              >
+                dragons
+              </li>
+              <li
+                className="tag-default tag-pill tag-outline"
+              >
+                training
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div
+          className="article-actions"
+        >
+          <div
+            className="article-meta"
+          >
+            <a
+              className="undefined"
+              href="/profile.html"
+              onClick={[Function]}
+            >
+              <img
+                src="https://i.stack.imgur.com/xHWG8.jpg"
+              />
+            </a>
+            <div
+              className="info"
+            >
+              <a
+                className="author"
+                href="/jake"
+                onClick={[Function]}
+              >
+                jake
+              </a>
+              <span
+                className="date"
+              >
+                2016-02-18T03:48:35.824Z
+              </span>
+            </div>
+            <button
+              className="btn btn-primary btn-outline-secondary btn-sm"
+            >
+              <i
+                className="ion-plus-round"
+              />
+                Follow 
+              jake
+               
+            </button>
+             
+            <button
+              className="btn btn-primary btn-outline-primary btn-sm"
+            >
+              <i
+                className="ion-heart"
+              />
+                Favorite Post
+               
+              <span
+                className="counter"
+              >
+                (
+                1
+                )
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col-xs-12 col-md-8 offset-md-2"
+          >
+            <form
+              className="card comment-form"
+            >
+              <div
+                className="card-block"
+              >
+                <textarea
+                  className="form-control"
+                  placeholder="Write a comment..."
+                  rows={3}
+                />
+              </div>
+              <div
+                className="card-footer"
+              >
+                <img
+                  className="comment-author-img"
+                  src="https://i.stack.imgur.com/xHWG8.jpg"
+                />
+                <button
+                  className="btn btn-primary btn-primary btn-sm"
+                >
+                  Post Comment
+                </button>
+              </div>
+            </form>
+            <div
+              className="card"
+            >
+              <div
+                className="card-block"
+              >
+                <p
+                  className="card-text"
+                >
+                  It takes a Jacobian
+                </p>
+              </div>
+              <div
+                className="card-footer"
+              >
+                <a
+                  className="comment-author"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  <img
+                    className="comment-author-img"
+                    src="https://i.stack.imgur.com/xHWG8.jpg"
+                  />
+                </a>
+                 
+                <a
+                  className="comment-author"
+                  href="/jake"
+                  onClick={[Function]}
+                >
+                  jake
+                </a>
+                <span
+                  className="date-posted"
+                >
+                  2016-02-18T03:22:56.637Z
+                </span>
+                <span
+                  className="mod-options"
+                >
+                  <i
+                    className="ion-trash-a"
+                  />
+                </span>
+              </div>
+            </div>
+            <div
+              className="card"
+            >
+              <div
+                className="card-block"
+              >
+                <p
+                  className="card-text"
+                >
+                  It takes a Jacobian2
+                </p>
+              </div>
+              <div
+                className="card-footer"
+              >
+                <a
+                  className="comment-author"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  <img
+                    className="comment-author-img"
+                    src="https://i.stack.imgur.com/xHWG8.jpg"
+                  />
+                </a>
+                 
+                <a
+                  className="comment-author"
+                  href="/jake"
+                  onClick={[Function]}
+                >
+                  jake
+                </a>
+                <span
+                  className="date-posted"
+                >
+                  2016-02-18T03:22:56.637Z
+                </span>
+                <span
+                  className="mod-options"
+                >
+                  <i
+                    className="ion-trash-a"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+  <footer>
+    <div
+      className="container"
+    >
+      <a
+        className="logo-font"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <span
+        className="attribution"
+      >
+        An interactive learning project from
+         
+        <a
+          href="https://thinkster.io"
+        >
+          Thinkster
+        </a>
+        . Code & design licensed under MIT.
+      </span>
+    </div>
+  </footer>,
+]
+`;
