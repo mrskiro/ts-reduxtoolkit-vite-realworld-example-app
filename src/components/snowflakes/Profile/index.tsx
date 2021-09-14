@@ -39,7 +39,7 @@ export const Profile = (props: Props) => (
                                         className="btn-outline-secondary action-btn"
                                         onClick={props.onClickUnFollow}
                                     >
-                                        <i className="ion-plus-round"></i>
+                                        <DesignSystem.Icon className="ion-plus-round" />
                                         &nbsp;{' '}
                                         {`UnFollow ${props.profile.username}`}
                                     </DesignSystem.Button>
@@ -49,7 +49,7 @@ export const Profile = (props: Props) => (
                                         className="btn-outline-secondary action-btn"
                                         onClick={props.onClickFollow}
                                     >
-                                        <i className="ion-plus-round"></i>
+                                        <DesignSystem.Icon className="ion-plus-round" />
                                         &nbsp;{' '}
                                         {`Follow ${props.profile.username}`}
                                     </DesignSystem.Button>
@@ -140,7 +140,7 @@ export const Profile = (props: Props) => (
                                                         article.slug
                                                     )}
                                                 >
-                                                    <i className="ion-heart"></i>{' '}
+                                                    <DesignSystem.Icon className="ion-heart" />{' '}
                                                     {article.favoritesCount}
                                                 </DesignSystem.Button>
                                             ) : (
@@ -152,7 +152,7 @@ export const Profile = (props: Props) => (
                                                         article.slug
                                                     )}
                                                 >
-                                                    <i className="ion-heart"></i>{' '}
+                                                    <DesignSystem.Icon className="ion-heart" />{' '}
                                                     {article.favoritesCount}
                                                 </DesignSystem.Button>
                                             )}

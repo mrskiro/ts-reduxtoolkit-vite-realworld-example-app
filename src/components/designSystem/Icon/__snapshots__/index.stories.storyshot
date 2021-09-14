@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots DesignSystem/Icon Close 1`] = `
+<i
+  className="ion-close-round"
+/>
+`;
+
+exports[`Storyshots DesignSystem/Icon Compose 1`] = `
+<i
+  className="ion-compose"
+/>
+`;
+
+exports[`Storyshots DesignSystem/Icon Edit 1`] = `
+<i
+  className="ion-edit"
+/>
+`;
+
+exports[`Storyshots DesignSystem/Icon Gear 1`] = `
+<i
+  className="ion-gear-a"
+/>
+`;
+
+exports[`Storyshots DesignSystem/Icon Heart 1`] = `
+<i
+  className="ion-heart"
+/>
+`;
+
+exports[`Storyshots DesignSystem/Icon Plus 1`] = `
+<i
+  className="ion-plus-round"
+/>
+`;
+
+exports[`Storyshots DesignSystem/Icon Pound 1`] = `
+<i
+  className="ion-pound"
+/>
+`;
+
+exports[`Storyshots DesignSystem/Icon Trash 1`] = `
+<i
+  className="ion-trash-a"
+/>
+`;

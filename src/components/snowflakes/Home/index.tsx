@@ -80,7 +80,7 @@ export const Home = (props: Props) => (
                                                 'global'
                                             )}
                                         >
-                                            <i className="ion-pound"></i>{' '}
+                                            <DesignSystem.Icon className="ion-pound" />{' '}
                                             {props.hashTag}
                                         </DesignSystem.Link>
                                     </li>
@@ -130,7 +130,7 @@ export const Home = (props: Props) => (
                                                     article.slug
                                                 )}
                                             >
-                                                <i className="ion-heart"></i>{' '}
+                                                <DesignSystem.Icon className="ion-heart" />{' '}
                                                 {article.favoritesCount}
                                             </DesignSystem.Button>
                                         ) : (
@@ -142,7 +142,7 @@ export const Home = (props: Props) => (
                                                     article.slug
                                                 )}
                                             >
-                                                <i className="ion-heart"></i>{' '}
+                                                <DesignSystem.Icon className="ion-heart" />{' '}
                                                 {article.favoritesCount}
                                             </DesignSystem.Button>
                                         )}

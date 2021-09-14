@@ -22,7 +22,8 @@ export const Header = (props: Props) => (
                                 className="nav-link"
                                 href="/editor"
                             >
-                                <i className="ion-compose"></i>&nbsp;New Post
+                                <DesignSystem.Icon className="ion-compose" />
+                                &nbsp;New Post
                             </DesignSystem.Link>
                         </li>
                         <li className="nav-item">
@@ -30,7 +31,8 @@ export const Header = (props: Props) => (
                                 className="nav-link"
                                 href="/settings"
                             >
-                                <i className="ion-gear-a"></i>&nbsp;Settings
+                                <DesignSystem.Icon className="ion-gear-a" />
+                                &nbsp;Settings
                             </DesignSystem.Link>
                         </li>
                     </>

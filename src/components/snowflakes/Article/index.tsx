@@ -40,7 +40,7 @@ export const Article = (props: Props) => (
                         className="btn-outline-secondary"
                         onClick={props.onClickFollow}
                     >
-                        <i className="ion-plus-round"></i>
+                        <DesignSystem.Icon className="ion-plus-round" />
                         &nbsp; Follow {props.article.author.username}{' '}
                         {/* <span className="counter">({props.article.favoritesCount})</span> */}
                     </DesignSystem.Button>
@@ -50,7 +50,7 @@ export const Article = (props: Props) => (
                         className="btn-outline-primary"
                         onClick={props.onClickFavorite}
                     >
-                        <i className="ion-heart"></i>
+                        <DesignSystem.Icon className="ion-heart" />
                         &nbsp; Favorite Article{' '}
                         <span className="counter">
                             ({props.article.favoritesCount})
@@ -109,7 +109,7 @@ export const Article = (props: Props) => (
                             size="sm"
                             className="btn-outline-secondary"
                         >
-                            <i className="ion-plus-round"></i>
+                            <DesignSystem.Icon className="ion-plus-round" />
                             &nbsp; Follow {props.article.author.username}{' '}
                             {/* <span className="counter">(10)</span> */}
                         </DesignSystem.Button>
@@ -118,7 +118,7 @@ export const Article = (props: Props) => (
                             size="sm"
                             className="btn-outline-primary"
                         >
-                            <i className="ion-heart"></i>
+                            <DesignSystem.Icon className="ion-heart" />
                             &nbsp; Favorite Post{' '}
                             <span className="counter">
                                 ({props.article.favoritesCount})
@@ -182,7 +182,7 @@ export const Article = (props: Props) => (
                                         {/* <i className="ion-edit"></i> */}
                                         {comment.author.username ===
                                             props.username && (
-                                            <i className="ion-trash-a"></i>
+                                            <DesignSystem.Icon className="ion-trash-a" />
                                         )}
                                     </span>
                                 </div>

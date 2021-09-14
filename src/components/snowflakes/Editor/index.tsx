@@ -77,7 +77,7 @@ export const Editor = (props: Props) => (
                                                         className="tag-pill tag-default"
                                                         key={tag}
                                                     >
-                                                        <i className="ion-close-round"></i>
+                                                        <DesignSystem.Icon className="ion-close-round" />
                                                         {tag}
                                                     </span>
                                                 )
