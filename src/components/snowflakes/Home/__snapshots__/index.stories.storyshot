@@ -148,7 +148,7 @@ Array [
               </div>
               <a
                 className="preview-link"
-                href="/"
+                href="/article/how-to-train-your-dragon1"
                 onClick={[Function]}
               >
                 <h1>
@@ -221,7 +221,7 @@ Array [
               </div>
               <a
                 className="preview-link"
-                href="/"
+                href="/article/how-to-train-your-dragon2"
                 onClick={[Function]}
               >
                 <h1>
@@ -471,7 +471,7 @@ Array [
               </div>
               <a
                 className="preview-link"
-                href="/"
+                href="/article/how-to-train-your-dragon1"
                 onClick={[Function]}
               >
                 <h1>
@@ -544,7 +544,7 @@ Array [
               </div>
               <a
                 className="preview-link"
-                href="/"
+                href="/article/how-to-train-your-dragon2"
                 onClick={[Function]}
               >
                 <h1>
@@ -796,7 +796,7 @@ Array [
               </div>
               <a
                 className="preview-link"
-                href="/"
+                href="/article/how-to-train-your-dragon1"
                 onClick={[Function]}
               >
                 <h1>
@@ -869,7 +869,7 @@ Array [
               </div>
               <a
                 className="preview-link"
-                href="/"
+                href="/article/how-to-train-your-dragon2"
                 onClick={[Function]}
               >
                 <h1>
@@ -1119,7 +1119,7 @@ Array [
               </div>
               <a
                 className="preview-link"
-                href="/"
+                href="/article/how-to-train-your-dragon1"
                 onClick={[Function]}
               >
                 <h1>
@@ -1192,7 +1192,7 @@ Array [
               </div>
               <a
                 className="preview-link"
-                href="/"
+                href="/article/how-to-train-your-dragon2"
                 onClick={[Function]}
               >
                 <h1>

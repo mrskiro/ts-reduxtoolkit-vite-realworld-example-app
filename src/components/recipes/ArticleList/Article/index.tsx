@@ -50,7 +50,10 @@ export const Article = (props: Props) => (
                 </DesignSystem.Button>
             )}
         </div>
-        <DesignSystem.Link href="" className="preview-link">
+        <DesignSystem.Link
+            href={`/article/${props.article.slug}`}
+            className="preview-link"
+        >
             <h1>{props.article.title}</h1>
             <p>{props.article.description}</p>
             <span>Read more...</span>
