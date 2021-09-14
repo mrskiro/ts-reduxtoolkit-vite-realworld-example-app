@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Snowflakes/Register Default 1`] = `
+Array [
+  <nav
+    className="navbar navbar-light"
+  >
+    <div
+      className="container"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <ul
+        className="nav navbar-nav pull-xs-right"
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/login"
+            onClick={[Function]}
+          >
+            Sign in
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/register"
+            onClick={[Function]}
+          >
+            Sign up
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <main>
+    <div
+      className="auth-page"
+    >
+      <div
+        className="container page"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-md-6 offset-md-3 col-xs-12"
+          >
+            <h1
+              className="text-xs-center"
+            >
+              Sign up
+            </h1>
+            <p
+              className="text-xs-center"
+            >
+              <a
+                className="undefined"
+                href="/login"
+                onClick={[Function]}
+              >
+                Have an account?
+              </a>
+            </p>
+            <ul
+              className="error-messages"
+            >
+              <li>
+                That email is already taken
+              </li>
+            </ul>
+            <form>
+              <fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control form-control-lg"
+                    placeholder="Your Name"
+                    type="text"
+                    value=""
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control form-control-lg"
+                    placeholder="Email"
+                    type="text"
+                    value=""
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control form-control-lg"
+                    placeholder="Password"
+                    type="password"
+                    value=""
+                  />
+                </fieldset>
+                <button
+                  className="btn btn-primary btn-primary pull-xs-right btn-lg"
+                >
+                  Sign up
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+  <footer>
+    <div
+      className="container"
+    >
+      <a
+        className="logo-font"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <span
+        className="attribution"
+      >
+        An interactive learning project from
+         
+        <a
+          href="https://thinkster.io"
+        >
+          Thinkster
+        </a>
+        . Code & design licensed under MIT.
+      </span>
+    </div>
+  </footer>,
+]
+`;
