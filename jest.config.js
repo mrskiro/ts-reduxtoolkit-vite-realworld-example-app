@@ -1,12 +1,11 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const base = require('./jest.config.base')
+
 module.exports = {
-    roots: ['<rootDir>/src'],
-    testEnvironment: 'jsdom',
+    ...base,
     testMatch: ['**/?(*.)+(spec).+(ts|tsx)'],
-    transform: {
-        '^.+\\.stories\\.tsx?$': '@storybook/addon-storyshots/injectFileName',
-        '^.+\\.(ts|tsx)$': 'ts-jest'
-    },
-    moduleNameMapper: {
-        '^~/(.+)': '<rootDir>/src/$1'
-    }
+    testPathIgnorePatterns: [
+        '<rootDir>/node_modules',
+        '<rootDir>/src/__tests__/storyshots.spec.ts'
+    ]
 }

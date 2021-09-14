@@ -6,7 +6,9 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "lint": "eslint 'src/**/*{ts,tsx}'",
-    "test": "jest",
+    "test": "jest --config=jest.config.js",
+    "snapshots": "jest --config=jest.config.snapshots.js",
+    "update-snapshots": "jest --config=jest.config.snapshots.js -u",
     "typecheck": "tsc --noEmit",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
