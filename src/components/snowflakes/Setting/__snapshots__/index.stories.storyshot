@@ -1,0 +1,387 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Snowflakes/Setting Default 1`] = `
+Array [
+  <nav
+    className="navbar navbar-light"
+  >
+    <div
+      className="container"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <ul
+        className="nav navbar-nav pull-xs-right"
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/editor"
+            onClick={[Function]}
+          >
+            <i
+              className="ion-compose"
+            />
+             New Post
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/settings"
+            onClick={[Function]}
+          >
+            <i
+              className="ion-gear-a"
+            />
+             Settings
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <main>
+    <div
+      className="settings-page"
+    >
+      <div
+        className="container page"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-md-6 offset-md-3 col-xs-12"
+          >
+            <h1
+              className="text-xs-center"
+            >
+              Your Settings
+            </h1>
+            <form
+              onSubmit={[Function]}
+            >
+              <fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control"
+                    name="image"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="URL of profile picture"
+                    type="text"
+                    value=""
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control form-control-lg"
+                    name="username"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Your Name"
+                    type="text"
+                    value=""
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <textarea
+                    className="form-control form-control-lg"
+                    name="bio"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Short bio about you"
+                    rows={8}
+                    value=""
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control form-control-lg"
+                    name="email"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Email"
+                    type="text"
+                    value=""
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control form-control-lg"
+                    name="password"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Password"
+                    type="password"
+                    value=""
+                  />
+                </fieldset>
+                <button
+                  className="btn btn-primary  btn-lg"
+                  type="submit"
+                >
+                  Update Settings
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+  <footer>
+    <div
+      className="container"
+    >
+      <a
+        className="logo-font"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <span
+        className="attribution"
+      >
+        An interactive learning project from
+         
+        <a
+          href="https://thinkster.io"
+        >
+          Thinkster
+        </a>
+        . Code & design licensed under MIT.
+      </span>
+    </div>
+  </footer>,
+]
+`;
+
+exports[`Storyshots Snowflakes/Setting Edit 1`] = `
+Array [
+  <nav
+    className="navbar navbar-light"
+  >
+    <div
+      className="container"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <ul
+        className="nav navbar-nav pull-xs-right"
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/editor"
+            onClick={[Function]}
+          >
+            <i
+              className="ion-compose"
+            />
+             New Post
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/settings"
+            onClick={[Function]}
+          >
+            <i
+              className="ion-gear-a"
+            />
+             Settings
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <main>
+    <div
+      className="settings-page"
+    >
+      <div
+        className="container page"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-md-6 offset-md-3 col-xs-12"
+          >
+            <h1
+              className="text-xs-center"
+            >
+              Your Settings
+            </h1>
+            <form
+              onSubmit={[Function]}
+            >
+              <fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control"
+                    name="image"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="URL of profile picture"
+                    type="text"
+                    value="https://i.stack.imgur.com/xHWG8.jpg"
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control form-control-lg"
+                    name="username"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Your Name"
+                    type="text"
+                    value="jake"
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <textarea
+                    className="form-control form-control-lg"
+                    name="bio"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Short bio about you"
+                    rows={8}
+                    value="I work at statefarm"
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control form-control-lg"
+                    name="email"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Email"
+                    type="text"
+                    value="jake@jake.jake"
+                  />
+                </fieldset>
+                <fieldset
+                  className="form-group"
+                >
+                  <input
+                    className="form-control form-control-lg"
+                    name="password"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Password"
+                    type="password"
+                    value=""
+                  />
+                </fieldset>
+                <button
+                  className="btn btn-primary  btn-lg"
+                  type="submit"
+                >
+                  Update Settings
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+  <footer>
+    <div
+      className="container"
+    >
+      <a
+        className="logo-font"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <span
+        className="attribution"
+      >
+        An interactive learning project from
+         
+        <a
+          href="https://thinkster.io"
+        >
+          Thinkster
+        </a>
+        . Code & design licensed under MIT.
+      </span>
+    </div>
+  </footer>,
+]
+`;
