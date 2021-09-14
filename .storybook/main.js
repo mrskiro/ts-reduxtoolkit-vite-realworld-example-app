@@ -6,7 +6,7 @@ module.exports = {
     core: {
         builder: 'storybook-builder-vite'
     },
-    viteFinal: (config, options) => {
+    viteFinal: (config, _) => {
         if (config.resolve && config.resolve.alias) {
             config.resolve.alias = {
                 '~': Path.resolve(__dirname, '../src')

@@ -1,0 +1,491 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Snowflakes/Profile Favorited Articles 1`] = `
+Array [
+  <nav
+    className="navbar navbar-light"
+  >
+    <div
+      className="container"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <ul
+        className="nav navbar-nav pull-xs-right"
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/editor"
+            onClick={[Function]}
+          >
+            <i
+              className="ion-compose"
+            />
+             New Post
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/settings"
+            onClick={[Function]}
+          >
+            <i
+              className="ion-gear-a"
+            />
+             Settings
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <main>
+    <div
+      className="profile-page"
+    >
+      <div
+        className="user-info"
+      >
+        <div
+          className="container"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-xs-12 col-md-10 offset-md-1"
+            >
+              <img
+                className="user-img"
+                src="https://i.stack.imgur.com/xHWG8.jpg"
+              />
+              <h4>
+                jake
+              </h4>
+              <p>
+                I work at statefarm
+              </p>
+              <button
+                className="btn btn-primary btn-outline-secondary action-btn btn-sm"
+              >
+                <i
+                  className="ion-plus-round"
+                />
+                 
+                 
+                Follow jake
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="container"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-xs-12 col-md-10 offset-md-1"
+          >
+            <div
+              className="articles-toggle"
+            >
+              <ul
+                className="nav nav-pills outline-active"
+              >
+                <li
+                  className="nav-item"
+                >
+                  <a
+                    className="nav-link"
+                    href="/profile/jake"
+                    onClick={[Function]}
+                  >
+                    My Articles
+                  </a>
+                </li>
+                <li
+                  className="nav-item"
+                >
+                  <a
+                    className="nav-link active"
+                    href="/profile/jake/favorites"
+                    onClick={[Function]}
+                  >
+                    Favorited Articles
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              className="article-preview"
+            >
+              <div
+                className="article-meta"
+              >
+                <a
+                  className="undefined"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  <img
+                    alt=""
+                    src="https://i.stack.imgur.com/xHWG8.jpg"
+                  />
+                </a>
+                <div
+                  className="info"
+                >
+                  <a
+                    className="author"
+                    href="/"
+                    onClick={[Function]}
+                  >
+                    jake
+                  </a>
+                  <span
+                    className="date"
+                  >
+                    Feb 18,2016
+                  </span>
+                </div>
+                <button
+                  className="btn btn-primary pull-xs-right btn-sm"
+                  onClick={[Function]}
+                >
+                  <i
+                    className="ion-heart"
+                  />
+                   
+                  1
+                </button>
+              </div>
+              <a
+                className="preview-link"
+                href="/"
+                onClick={[Function]}
+              >
+                <h1>
+                  How to train your dragon
+                </h1>
+                <p>
+                  Ever wonder how?
+                </p>
+                <span>
+                  Read more...
+                </span>
+                <ul
+                  className="tag-list"
+                >
+                  <li
+                    className="tag-default tag-pill tag-outline"
+                  >
+                    dragons
+                  </li>
+                  <li
+                    className="tag-default tag-pill tag-outline"
+                  >
+                    training
+                  </li>
+                </ul>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+  <footer>
+    <div
+      className="container"
+    >
+      <a
+        className="logo-font"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <span
+        className="attribution"
+      >
+        An interactive learning project from
+         
+        <a
+          href="https://thinkster.io"
+        >
+          Thinkster
+        </a>
+        . Code & design licensed under MIT.
+      </span>
+    </div>
+  </footer>,
+]
+`;
+
+exports[`Storyshots Snowflakes/Profile My Articles 1`] = `
+Array [
+  <nav
+    className="navbar navbar-light"
+  >
+    <div
+      className="container"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <ul
+        className="nav navbar-nav pull-xs-right"
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/editor"
+            onClick={[Function]}
+          >
+            <i
+              className="ion-compose"
+            />
+             New Post
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/settings"
+            onClick={[Function]}
+          >
+            <i
+              className="ion-gear-a"
+            />
+             Settings
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <main>
+    <div
+      className="profile-page"
+    >
+      <div
+        className="user-info"
+      >
+        <div
+          className="container"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-xs-12 col-md-10 offset-md-1"
+            >
+              <img
+                className="user-img"
+                src="https://i.stack.imgur.com/xHWG8.jpg"
+              />
+              <h4>
+                jake
+              </h4>
+              <p>
+                I work at statefarm
+              </p>
+              <button
+                className="btn btn-primary btn-outline-secondary action-btn btn-sm"
+              >
+                <i
+                  className="ion-plus-round"
+                />
+                 
+                 
+                Follow jake
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="container"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-xs-12 col-md-10 offset-md-1"
+          >
+            <div
+              className="articles-toggle"
+            >
+              <ul
+                className="nav nav-pills outline-active"
+              >
+                <li
+                  className="nav-item"
+                >
+                  <a
+                    className="nav-link active"
+                    href="/profile/jake"
+                    onClick={[Function]}
+                  >
+                    My Articles
+                  </a>
+                </li>
+                <li
+                  className="nav-item"
+                >
+                  <a
+                    className="nav-link"
+                    href="/profile/jake/favorites"
+                    onClick={[Function]}
+                  >
+                    Favorited Articles
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              className="article-preview"
+            >
+              <div
+                className="article-meta"
+              >
+                <a
+                  className="undefined"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  <img
+                    alt=""
+                    src="https://i.stack.imgur.com/xHWG8.jpg"
+                  />
+                </a>
+                <div
+                  className="info"
+                >
+                  <a
+                    className="author"
+                    href="/"
+                    onClick={[Function]}
+                  >
+                    jake
+                  </a>
+                  <span
+                    className="date"
+                  >
+                    Feb 18,2016
+                  </span>
+                </div>
+                <button
+                  className="btn btn-outline-primary pull-xs-right btn-sm"
+                  onClick={[Function]}
+                >
+                  <i
+                    className="ion-heart"
+                  />
+                   
+                  0
+                </button>
+              </div>
+              <a
+                className="preview-link"
+                href="/"
+                onClick={[Function]}
+              >
+                <h1>
+                  How to train your dragon
+                </h1>
+                <p>
+                  Ever wonder how?
+                </p>
+                <span>
+                  Read more...
+                </span>
+                <ul
+                  className="tag-list"
+                >
+                  <li
+                    className="tag-default tag-pill tag-outline"
+                  >
+                    dragons
+                  </li>
+                  <li
+                    className="tag-default tag-pill tag-outline"
+                  >
+                    training
+                  </li>
+                </ul>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>,
+  <footer>
+    <div
+      className="container"
+    >
+      <a
+        className="logo-font"
+        href="/"
+        onClick={[Function]}
+      >
+        conduit
+      </a>
+      <span
+        className="attribution"
+      >
+        An interactive learning project from
+         
+        <a
+          href="https://thinkster.io"
+        >
+          Thinkster
+        </a>
+        . Code & design licensed under MIT.
+      </span>
+    </div>
+  </footer>,
+]
+`;
