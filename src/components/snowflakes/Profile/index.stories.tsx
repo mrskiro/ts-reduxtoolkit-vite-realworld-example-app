@@ -15,6 +15,7 @@ const Template: Storybook.ComponentStory<typeof Profile> = args => (
 
 export const MyArticles = Template.bind({})
 MyArticles.args = {
+    username: Mock.profile.username,
     isGetMe: true,
     isLoadingProfile: false,
     isLoadingArticles: false,

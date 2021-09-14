@@ -16,6 +16,7 @@ export const Profile = () => {
     const dispatch = ReactRedux.useDispatch()
 
     const isGetme = ReactRedux.useSelector(Me.selectIsFullfiled)
+    const myUsername = ReactRedux.useSelector(Me.selectUsername)
 
     const profileFactory = ReactRedux.useSelector(
         Profiles.selectProfileByUsername
@@ -75,6 +76,7 @@ export const Profile = () => {
     if (!profile) return null
     return (
         <SnowFlakes.Profile
+            username={myUsername}
             isGetMe={isGetme}
             profile={profile}
             isLoadingProfile={isLoadingProfile}

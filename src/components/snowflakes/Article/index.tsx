@@ -19,7 +19,7 @@ type Props = {
 }
 
 export const Article = (props: Props) => (
-    <Main isGetMe={false}>
+    <Main isGetMe={false} username={props.username}>
         <div className="article-page">
             <DesignSystem.Banner>
                 <h1>{props.article.title}</h1>
@@ -153,7 +153,7 @@ export const Article = (props: Props) => (
                         </form>
 
                         {props.comments.map(comment => (
-                            <div className="card">
+                            <div className="card" key={comment.id}>
                                 <div className="card-block">
                                     <p className="card-text">{comment.body}</p>
                                 </div>

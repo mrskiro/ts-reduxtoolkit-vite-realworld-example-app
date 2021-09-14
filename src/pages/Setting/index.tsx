@@ -24,6 +24,7 @@ export const Setting = () => {
     if (!isGetme) return <div>loading...</div>
     return (
         <SnowFlakes.Setting
+            username={username}
             initialValues={{ username, email, bio, image }}
             onSubmit={onSubmit}
         />

@@ -2,9 +2,11 @@ import * as React from 'react'
 import * as ReactFinalForm from 'react-final-form'
 import * as DesignSystem from '~/components/designSystem'
 import * as Recipes from '~/components/recipes'
+import * as Entities from '~/entities'
 import { Main } from '~/components/layouts/Main'
 
 type Props = {
+    username: Entities.Me['username']
     initialValues: {
         username: string
         bio: string
@@ -15,7 +17,7 @@ type Props = {
 }
 
 export const Setting = (props: Props) => (
-    <Main isGetMe={true}>
+    <Main isGetMe={true} username={props.username}>
         <div className="settings-page">
             <div className="container page">
                 <div className="row">

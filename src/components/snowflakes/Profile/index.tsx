@@ -5,6 +5,7 @@ import * as Entities from '~/entities'
 import { Main } from '~/components/layouts/Main'
 
 type Props = {
+    username: Entities.Me['username']
     isGetMe: boolean
     isLoadingProfile: boolean
     isLoadingArticles: boolean
@@ -19,7 +20,7 @@ type Props = {
 }
 
 export const Profile = (props: Props) => (
-    <Main isGetMe={props.isGetMe}>
+    <Main isGetMe={props.isGetMe} username={props.username}>
         {!props.isLoadingProfile && (
             <div className="profile-page">
                 <div className="user-info">

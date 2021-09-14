@@ -6,6 +6,7 @@ import { Main } from '~/components/layouts/Main'
 import * as Entities from '~/entities'
 
 type Props = {
+    username: Entities.Me['username']
     initialValues: Pick<
         Entities.Article,
         'title' | 'body' | 'description' | 'tagList'
@@ -19,7 +20,7 @@ type Props = {
 }
 
 export const Editor = (props: Props) => (
-    <Main isGetMe>
+    <Main isGetMe username={props.username}>
         <div className="editor-page">
             <div className="container page">
                 <div className="row">

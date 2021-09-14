@@ -22,7 +22,7 @@ Array [
           className="nav-item"
         >
           <a
-            className="nav-link"
+            className="nav-link active"
             href="/"
             onClick={[Function]}
           >
@@ -333,7 +333,7 @@ Array [
           className="nav-item"
         >
           <a
-            className="nav-link"
+            className="nav-link active"
             href="/"
             onClick={[Function]}
           >
@@ -366,6 +366,17 @@ Array [
               className="ion-gear-a"
             />
              Settings
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/profile/jake"
+            onClick={[Function]}
+          >
+            jake
           </a>
         </li>
       </ul>
@@ -645,7 +656,7 @@ Array [
           className="nav-item"
         >
           <a
-            className="nav-link"
+            className="nav-link active"
             href="/"
             onClick={[Function]}
           >
@@ -970,7 +981,7 @@ Array [
           className="nav-item"
         >
           <a
-            className="nav-link"
+            className="nav-link active"
             href="/"
             onClick={[Function]}
           >
@@ -1003,6 +1014,17 @@ Array [
               className="ion-gear-a"
             />
              Settings
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/profile/"
+            onClick={[Function]}
+          >
+            
           </a>
         </li>
       </ul>

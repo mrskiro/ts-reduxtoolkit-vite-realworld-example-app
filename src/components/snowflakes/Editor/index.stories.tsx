@@ -15,6 +15,7 @@ const Template: Storybook.ComponentStory<typeof Editor> = args => (
 
 export const Default = Template.bind({})
 Default.args = {
+    username: Mock.profile.username,
     initialValues: {
         title: '',
         body: '',

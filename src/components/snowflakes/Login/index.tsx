@@ -12,7 +12,7 @@ type Props = {
 }
 
 export const Login = (props: Props) => (
-    <Main isGetMe={false}>
+    <Main isGetMe={false} username="">
         <div className="auth-page">
             <div className="container page">
                 <div className="row">

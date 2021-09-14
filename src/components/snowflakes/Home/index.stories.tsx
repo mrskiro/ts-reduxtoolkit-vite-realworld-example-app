@@ -15,6 +15,7 @@ const Template: Storybook.ComponentStory<typeof Home> = args => (
 
 export const Default = Template.bind({})
 Default.args = {
+    username: '',
     isGetMe: false,
     isLoadingTags: false,
     isLoadingArticles: false,
@@ -31,7 +32,8 @@ Default.args = {
 export const LoggedIn = Template.bind({})
 LoggedIn.args = {
     ...Default.args,
-    isGetMe: true
+    isGetMe: true,
+    username: Mock.profile.username
 }
 
 export const YourFeed = Template.bind({})

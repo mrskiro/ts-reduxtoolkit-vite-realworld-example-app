@@ -13,6 +13,7 @@ export const Home = () => {
 
     const dispatch = ReactRedux.useDispatch()
     const isGetme = ReactRedux.useSelector(Me.selectIsFullfiled)
+    const username = ReactRedux.useSelector(Me.selectUsername)
 
     const articles = ReactRedux.useSelector(Articles.selectArticles)
 
@@ -66,6 +67,7 @@ export const Home = () => {
 
     return (
         <SnowFlakes.Home
+            username={username}
             isGetMe={isGetme}
             isLoadingArticles={isLoadingArticles}
             isLoadingTags={isLoadingTags}

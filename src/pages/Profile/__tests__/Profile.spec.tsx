@@ -4,6 +4,7 @@ import * as Node from 'msw/node'
 import * as Rtl from '~/__tests__/utils'
 import * as Api from '../../../../mock_server/api'
 import * as Store from '~/store'
+import * as Mock from '~/__tests__/__mocks__'
 import '@testing-library/jest-dom'
 
 import { Profile } from '../'
@@ -25,7 +26,10 @@ const history = History.createMemoryHistory({
 const preloadedState = {
     entities: {
         me: {
-            status: 'Fullfiled'
+            status: 'Fullfiled',
+            data: {
+                username: Mock.profile.username
+            }
         },
         profiles: {
             status: 'Pending',

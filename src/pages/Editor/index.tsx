@@ -13,6 +13,7 @@ export const Editor = () => {
     const dispatch = ReactRedux.useDispatch()
 
     const isGetme = ReactRedux.useSelector(Me.selectIsFullfiled)
+    const username = ReactRedux.useSelector(Me.selectUsername)
 
     const onAddTag =
         (
@@ -53,6 +54,7 @@ export const Editor = () => {
 
     return (
         <SnowFlakes.Editor
+            username={username}
             initialValues={{
                 title: '',
                 description: '',

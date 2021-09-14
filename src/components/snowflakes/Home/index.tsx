@@ -5,6 +5,7 @@ import * as Entities from '~/entities'
 import { Main } from '~/components/layouts/Main'
 
 type Props = {
+    username: Entities.Me['username']
     isGetMe: boolean
     isLoadingArticles: boolean
     isLoadingTags: boolean
@@ -19,7 +20,7 @@ type Props = {
 }
 
 export const Home = (props: Props) => (
-    <Main isGetMe={props.isGetMe}>
+    <Main isGetMe={props.isGetMe} username={props.username}>
         <div className="home-page">
             {!props.isGetMe && (
                 <DesignSystem.Banner>
