@@ -2,7 +2,7 @@ import * as Entities from '~/entities'
 import { profile } from '../profile'
 
 export const article: Entities.Article = {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon1',
     title: 'How to train your dragon',
     description: 'Ever wonder how?',
     body: 'It takes a Jacobian',
@@ -15,7 +15,7 @@ export const article: Entities.Article = {
 }
 
 export const favoritedArticle: Entities.Article = {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon2',
     title: 'How to train your dragon',
     description: 'Ever wonder how?',
     body: 'It takes a Jacobian',

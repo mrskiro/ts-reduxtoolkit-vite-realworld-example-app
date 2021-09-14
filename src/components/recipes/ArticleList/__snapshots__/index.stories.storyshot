@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Recipes/ArticleList Default 1`] = `
+Array [
+  <div
+    className="article-preview"
+  >
+    <div
+      className="article-meta"
+    >
+      <a
+        className="undefined"
+        href="/profile/jake"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="https://i.stack.imgur.com/xHWG8.jpg"
+        />
+      </a>
+      <div
+        className="info"
+      >
+        <a
+          className="author"
+          href="/profile/jake"
+          onClick={[Function]}
+        >
+          jake
+        </a>
+        <span
+          className="date"
+        >
+          Feb 18,2016
+        </span>
+      </div>
+      <button
+        className="btn btn-outline-primary pull-xs-right btn-sm"
+        onClick={[Function]}
+      >
+        <i
+          className="ion-heart"
+        />
+         
+        0
+      </button>
+    </div>
+    <a
+      className="preview-link"
+      href="/"
+      onClick={[Function]}
+    >
+      <h1>
+        How to train your dragon
+      </h1>
+      <p>
+        Ever wonder how?
+      </p>
+      <span>
+        Read more...
+      </span>
+      <ul
+        className="tag-list"
+      >
+        <li
+          className="tag-default tag-pill tag-outline"
+        >
+          dragons
+        </li>
+        <li
+          className="tag-default tag-pill tag-outline"
+        >
+          training
+        </li>
+      </ul>
+    </a>
+  </div>,
+  <div
+    className="article-preview"
+  >
+    <div
+      className="article-meta"
+    >
+      <a
+        className="undefined"
+        href="/profile/jake"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="https://i.stack.imgur.com/xHWG8.jpg"
+        />
+      </a>
+      <div
+        className="info"
+      >
+        <a
+          className="author"
+          href="/profile/jake"
+          onClick={[Function]}
+        >
+          jake
+        </a>
+        <span
+          className="date"
+        >
+          Feb 18,2016
+        </span>
+      </div>
+      <button
+        className="btn btn-primary pull-xs-right btn-sm"
+        onClick={[Function]}
+      >
+        <i
+          className="ion-heart"
+        />
+         
+        1
+      </button>
+    </div>
+    <a
+      className="preview-link"
+      href="/"
+      onClick={[Function]}
+    >
+      <h1>
+        How to train your dragon
+      </h1>
+      <p>
+        Ever wonder how?
+      </p>
+      <span>
+        Read more...
+      </span>
+      <ul
+        className="tag-list"
+      >
+        <li
+          className="tag-default tag-pill tag-outline"
+        >
+          dragons
+        </li>
+        <li
+          className="tag-default tag-pill tag-outline"
+        >
+          training
+        </li>
+      </ul>
+    </a>
+  </div>,
+]
+`;

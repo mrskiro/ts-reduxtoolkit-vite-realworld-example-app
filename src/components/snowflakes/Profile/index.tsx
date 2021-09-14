@@ -2,7 +2,6 @@ import * as React from 'react'
 import * as DesignSystem from '~/components/designSystem'
 import * as Recipes from '~/components/recipes'
 import * as Entities from '~/entities'
-import * as Libs from '~/libs'
 import { Main } from '~/components/layouts/Main'
 
 type Props = {
@@ -106,79 +105,11 @@ export const Profile = (props: Props) => (
                                     No articles are here... yet.
                                 </div>
                             ) : (
-                                props.articles.map(article => (
-                                    <div
-                                        className="article-preview"
-                                        key={article.slug}
-                                    >
-                                        <div className="article-meta">
-                                            <DesignSystem.Link href="">
-                                                <img
-                                                    src={article.author.image}
-                                                    alt=""
-                                                />
-                                            </DesignSystem.Link>
-                                            <div className="info">
-                                                <DesignSystem.Link
-                                                    href=""
-                                                    className="author"
-                                                >
-                                                    {article.author.username}
-                                                </DesignSystem.Link>
-                                                <span className="date">
-                                                    {Libs.formatForArticle(
-                                                        article.createdAt
-                                                    )}
-                                                </span>
-                                            </div>
-                                            {article.favorited ? (
-                                                <DesignSystem.Button
-                                                    size="sm"
-                                                    variant="primary"
-                                                    className="pull-xs-right"
-                                                    onClick={props.onClickUnFavorite(
-                                                        article.slug
-                                                    )}
-                                                >
-                                                    <DesignSystem.Icon className="ion-heart" />{' '}
-                                                    {article.favoritesCount}
-                                                </DesignSystem.Button>
-                                            ) : (
-                                                <DesignSystem.Button
-                                                    size="sm"
-                                                    variant="outline-primary"
-                                                    className="pull-xs-right"
-                                                    onClick={props.onClickFavorite(
-                                                        article.slug
-                                                    )}
-                                                >
-                                                    <DesignSystem.Icon className="ion-heart" />{' '}
-                                                    {article.favoritesCount}
-                                                </DesignSystem.Button>
-                                            )}
-                                        </div>
-                                        <DesignSystem.Link
-                                            href=""
-                                            className="preview-link"
-                                        >
-                                            <h1>{article.title}</h1>
-                                            <p>{article.description}</p>
-                                            <span>Read more...</span>
-                                            <ul className="tag-list">
-                                                {article.tagList.map(
-                                                    (tag, i) => (
-                                                        <li
-                                                            className="tag-default tag-pill tag-outline"
-                                                            key={i}
-                                                        >
-                                                            {tag}
-                                                        </li>
-                                                    )
-                                                )}
-                                            </ul>
-                                        </DesignSystem.Link>
-                                    </div>
-                                ))
+                                <Recipes.ArticleList
+                                    articles={props.articles}
+                                    onClickFavorite={props.onClickFavorite}
+                                    onClickUnFavorite={props.onClickUnFavorite}
+                                />
                             )}
                         </div>
                     </div>
