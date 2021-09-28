@@ -34,25 +34,15 @@ export const Profile = (props: Props) => (
                                 <h4>{props.profile.username}</h4>
                                 <p>{props.profile.bio}</p>
                                 {props.profile.following ? (
-                                    <DesignSystem.Button
-                                        size="sm"
-                                        className="btn-outline-secondary action-btn"
-                                        onClick={props.onClickUnFollow}
-                                    >
-                                        <DesignSystem.Icon className="ion-plus-round" />
-                                        &nbsp;{' '}
-                                        {`UnFollow ${props.profile.username}`}
-                                    </DesignSystem.Button>
+                                    <Recipes.UnFollowButton
+                                        username={props.profile.username}
+                                        onClickUnFollow={props.onClickUnFollow}
+                                    />
                                 ) : (
-                                    <DesignSystem.Button
-                                        size="sm"
-                                        className="btn-outline-secondary action-btn"
-                                        onClick={props.onClickFollow}
-                                    >
-                                        <DesignSystem.Icon className="ion-plus-round" />
-                                        &nbsp;{' '}
-                                        {`Follow ${props.profile.username}`}
-                                    </DesignSystem.Button>
+                                    <Recipes.FollowButton
+                                        username={props.profile.username}
+                                        onClickFollow={props.onClickFollow}
+                                    />
                                 )}
                             </div>
                         </div>

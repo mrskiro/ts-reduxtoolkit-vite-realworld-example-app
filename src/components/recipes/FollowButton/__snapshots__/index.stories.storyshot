@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Recipes/FollowButton Default 1`] = `
+<button
+  className="btn btn-primary btn-outline-secondary action-btn btn-sm"
+  onClick={[Function]}
+>
+  <i
+    className="ion-plus-round"
+  />
+    
+  Follow jake
+</button>
+`;
+
+exports[`Storyshots Recipes/FollowButton Un Follow 1`] = `
+<button
+  className="btn btn-primary btn-outline-secondary action-btn btn-sm"
+  onClick={[Function]}
+>
+  <i
+    className="ion-plus-round"
+  />
+    
+  UnFollow jake
+</button>
+`;
