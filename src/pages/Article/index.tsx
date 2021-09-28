@@ -43,11 +43,8 @@ export const Article = () => {
         dispatch(Articles.unFavorite({ slug }))
     }
 
-    const onSubmitComment = (
-        e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-    ) => {
-        e.preventDefault()
-        dispatch(Comments.addComment({ slug, body: 'aaa' }))
+    const onSubmitComment = (values: { comment: string }) => {
+        dispatch(Comments.addComment({ slug, body: values.comment }))
     }
 
     if (!article) return null

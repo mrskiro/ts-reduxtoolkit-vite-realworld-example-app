@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as ReactFinalForm from 'react-final-form'
 import * as DesignSystem from '~/components/designSystem'
 import * as Recipes from '~/components/recipes'
 import { Main } from '~/components/layouts/Main'
@@ -13,9 +14,7 @@ type Props = {
     onClickUnFollow: () => void
     onClickFavorite: () => void
     onClickUnFavorite: () => void
-    onSubmitComment: (
-        e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-    ) => void
+    onSubmitComment: (values: { comment: string }) => void
 }
 
 export const Article = (props: Props) => (
@@ -152,28 +151,47 @@ export const Article = (props: Props) => (
 
                 <div className="row">
                     <div className="col-xs-12 col-md-8 offset-md-2">
-                        <form className="card comment-form">
-                            <div className="card-block">
-                                <DesignSystem.Textarea
-                                    className="form-control"
-                                    placeholder="Write a comment..."
-                                    rows={3}
-                                />
-                            </div>
-                            <div className="card-footer">
-                                <img
-                                    src={props.myImage}
-                                    className="comment-author-img"
-                                />
-                                <DesignSystem.Button
-                                    size="sm"
-                                    className="btn-primary"
-                                    onClick={props.onSubmitComment}
+                        <ReactFinalForm.Form
+                            onSubmit={props.onSubmitComment}
+                            initialValues={{ comment: '' }}
+                            render={renderProps => (
+                                <Recipes.Form
+                                    onSubmit={async e => {
+                                        await renderProps.handleSubmit(e)
+                                        renderProps.form.reset()
+                                    }}
+                                    className="card comment-form"
                                 >
-                                    Post Comment
-                                </DesignSystem.Button>
-                            </div>
-                        </form>
+                                    <ReactFinalForm.Field name="comment">
+                                        {({ input }) => (
+                                            <>
+                                                <div className="card-block">
+                                                    <Recipes.TextareaField
+                                                        className="form-control"
+                                                        placeholder="Write a comment..."
+                                                        rows={3}
+                                                        {...input}
+                                                    />
+                                                </div>
+                                                <div className="card-footer">
+                                                    <img
+                                                        src={props.myImage}
+                                                        className="comment-author-img"
+                                                    />
+                                                    <DesignSystem.Button
+                                                        size="sm"
+                                                        className="btn-primary"
+                                                        type="submit"
+                                                    >
+                                                        Post Comment
+                                                    </DesignSystem.Button>
+                                                </div>
+                                            </>
+                                        )}
+                                    </ReactFinalForm.Field>
+                                </Recipes.Form>
+                            )}
+                        />
 
                         {props.comments.map(comment => (
                             <div className="card" key={comment.id}>
