@@ -35,3 +35,16 @@ export const addComment = async ({
 
     return response
 }
+
+export const deleteComment = async ({
+    slug,
+    id
+}: {
+    slug: Entities.Article['slug']
+    id: Entities.Comment['id']
+}): Promise<AxiosResponse> => {
+    const response = await Modules.apiInstance().delete<void>(
+        `articles/${slug}/comments/${id}`
+    )
+    return response
+}

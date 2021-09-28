@@ -5,6 +5,7 @@ import * as SnowFlakes from '~/components/snowflakes'
 import * as Articles from '~/store/entities/articles'
 import * as Comments from '~/store/entities/articles/comments'
 import * as Me from '~/store/entities/me'
+import * as Entities from '~/entities'
 
 export const Article = () => {
     const { slug } = ReactRouterDom.useParams<{ slug: string }>()
@@ -47,6 +48,10 @@ export const Article = () => {
         dispatch(Comments.addComment({ slug, body: values.comment }))
     }
 
+    const onDeleteComment = (id: Entities.Comment['id']) => () => {
+        dispatch(Comments.deleteComment({ slug, id }))
+    }
+
     if (!article) return null
     return (
         <SnowFlakes.Article
@@ -59,6 +64,7 @@ export const Article = () => {
             onClickFavorite={onClickFavorite}
             onClickUnFavorite={onClickUnFavorite}
             onSubmitComment={onSubmitComment}
+            onDeleteComment={onDeleteComment}
         />
     )
 }

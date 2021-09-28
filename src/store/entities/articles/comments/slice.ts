@@ -35,6 +35,14 @@ const slice = Reduxtoolkit.createSlice({
                 [action.payload.id]: action.payload
             }
         })
+        builder.addCase(Operations.deleteComment.fulfilled, (state, action) => {
+            state.status = Status.fullfiled
+
+            delete state.data[action.payload]
+            state.data = {
+                ...state.data
+            }
+        })
     }
 })
 

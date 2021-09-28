@@ -40,3 +40,19 @@ export const addComment = Reduxtoolkit.createAsyncThunk<
         return thunkAPI.rejectWithValue(error)
     }
 })
+
+export const deleteComment = Reduxtoolkit.createAsyncThunk<
+    Entities.Comment['id'],
+    { slug: Entities.Article['slug']; id: Entities.Comment['id'] },
+    Store.AsyncThunkConfig
+>('entities/articles/deleteComment', async (arg, thunkAPI) => {
+    try {
+        await thunkAPI.extra.api.article.comments.deleteComment({
+            slug: arg.slug,
+            id: arg.id
+        })
+        return arg.id
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error)
+    }
+})

@@ -38,3 +38,10 @@ export const addComment = rest.post<{ comment: Entities.Comment }>(
         )
     }
 )
+
+export const deleteComment = rest.delete(
+    Modules.makePath('/articles/:slug/comments/:id'),
+    (req, res, ctx) => {
+        return res(ctx.status(200))
+    }
+)

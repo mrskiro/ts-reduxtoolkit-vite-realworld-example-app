@@ -4,6 +4,7 @@ import * as DesignSystem from '~/components/designSystem'
 import * as Recipes from '~/components/recipes'
 import { Main } from '~/components/layouts/Main'
 import * as Entities from '~/entities'
+import * as Libs from '~/libs'
 
 type Props = {
     username: Entities.Me['username']
@@ -15,6 +16,7 @@ type Props = {
     onClickFavorite: () => void
     onClickUnFavorite: () => void
     onSubmitComment: (values: { comment: string }) => void
+    onDeleteComment: (id: Entities.Comment['id']) => () => void
 }
 
 export const Article = (props: Props) => (
@@ -216,11 +218,16 @@ export const Article = (props: Props) => (
                                         {comment.author.username}
                                     </DesignSystem.Link>
                                     <span className="date-posted">
-                                        {/* Dec 29th */}
-                                        {comment.updatedAt}
+                                        {Libs.formatForArticle(
+                                            comment.updatedAt
+                                        )}
                                     </span>
-                                    <span className="mod-options">
-                                        {/* <i className="ion-edit"></i> */}
+                                    <span
+                                        className="mod-options"
+                                        onClick={props.onDeleteComment(
+                                            comment.id
+                                        )}
+                                    >
                                         {comment.author.username ===
                                             props.username && (
                                             <DesignSystem.Icon className="ion-trash-a" />

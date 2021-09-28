@@ -16,5 +16,6 @@ export const handlers = [
     Api.createArticle,
     Api.getArticle,
     Api.getComments,
-    Api.addComment
+    Api.addComment,
+    Api.deleteComment
 ]

@@ -24,7 +24,8 @@ export const extraArgument = {
             getArticle: Api.getArticle,
             comments: {
                 getComments: Api.getComments,
-                addComment: Api.addComment
+                addComment: Api.addComment,
+                deleteComment: Api.deleteComment
             }
         },
         profile: {
