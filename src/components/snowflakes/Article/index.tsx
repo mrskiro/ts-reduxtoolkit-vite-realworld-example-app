@@ -35,15 +35,17 @@ export const Article = (props: Props) => (
                         </DesignSystem.Link>
                         <span className="date">{props.article.createdAt}</span>
                     </div>
-                    <DesignSystem.Button
-                        size="sm"
-                        className="btn-outline-secondary"
-                        onClick={props.onClickFollow}
-                    >
-                        <DesignSystem.Icon className="ion-plus-round" />
-                        &nbsp; Follow {props.article.author.username}{' '}
-                        {/* <span className="counter">({props.article.favoritesCount})</span> */}
-                    </DesignSystem.Button>
+                    {props.article.author.following ? (
+                        <Recipes.UnFollowButton
+                            username={props.article.author.username}
+                            onClickUnFollow={props.onClickUnFollow}
+                        />
+                    ) : (
+                        <Recipes.FollowButton
+                            username={props.article.author.username}
+                            onClickFollow={props.onClickFollow}
+                        />
+                    )}
                     &nbsp;&nbsp;
                     <DesignSystem.Button
                         size="sm"
@@ -105,14 +107,17 @@ export const Article = (props: Props) => (
                                 {props.article.updatedAt}
                             </span>
                         </div>
-                        <DesignSystem.Button
-                            size="sm"
-                            className="btn-outline-secondary"
-                        >
-                            <DesignSystem.Icon className="ion-plus-round" />
-                            &nbsp; Follow {props.article.author.username}{' '}
-                            {/* <span className="counter">(10)</span> */}
-                        </DesignSystem.Button>
+                        {props.article.author.following ? (
+                            <Recipes.UnFollowButton
+                                username={props.article.author.username}
+                                onClickUnFollow={props.onClickUnFollow}
+                            />
+                        ) : (
+                            <Recipes.FollowButton
+                                username={props.article.author.username}
+                                onClickFollow={props.onClickFollow}
+                            />
+                        )}
                         &nbsp;
                         <DesignSystem.Button
                             size="sm"

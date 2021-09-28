@@ -59,6 +59,18 @@ const slice = Reduxtoolkit.createSlice({
                 [action.payload.slug]: action.payload
             }
         })
+        builder.addCase(Operations.follow.fulfilled, (state, action) => {
+            state.data = {
+                ...state.data,
+                [action.payload.slug]: action.payload
+            }
+        })
+        builder.addCase(Operations.unFollow.fulfilled, (state, action) => {
+            state.data = {
+                ...state.data,
+                [action.payload.slug]: action.payload
+            }
+        })
     }
 })
 

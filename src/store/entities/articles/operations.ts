@@ -112,3 +112,47 @@ export const getArticle = Reduxtoolkit.createAsyncThunk<
         return thunkAPI.rejectWithValue(error)
     }
 })
+
+export const follow = Reduxtoolkit.createAsyncThunk<
+    Entities.Article,
+    {
+        username: Entities.Profile['username']
+        // くるしい
+        slug: Entities.Article['slug']
+    },
+    Store.AsyncThunkConfig
+>('entities/articles/follow', async (arg, thunkAPI) => {
+    try {
+        const article =
+            thunkAPI.getState().entities.articles.articles.data[arg.slug]
+        const response = await thunkAPI.extra.api.profile.follow(arg.username)
+        return {
+            ...article,
+            author: response.data.profile
+        }
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error)
+    }
+})
+
+export const unFollow = Reduxtoolkit.createAsyncThunk<
+    Entities.Article,
+    {
+        username: Entities.Profile['username']
+        slug: Entities.Article['slug']
+    },
+    Store.AsyncThunkConfig
+>('entities/articles/unFollow', async (arg, thunkAPI) => {
+    try {
+        const article =
+            thunkAPI.getState().entities.articles.articles.data[arg.slug]
+        const response = await thunkAPI.extra.api.profile.unFollow(arg.username)
+
+        return {
+            ...article,
+            author: response.data.profile
+        }
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error)
+    }
+})

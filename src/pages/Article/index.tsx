@@ -4,7 +4,6 @@ import * as ReactRouterDom from 'react-router-dom'
 import * as SnowFlakes from '~/components/snowflakes'
 import * as Articles from '~/store/entities/articles'
 import * as Comments from '~/store/entities/articles/comments'
-import * as Profiles from '~/store/entities/profiles'
 import * as Me from '~/store/entities/me'
 
 export const Article = () => {
@@ -28,12 +27,12 @@ export const Article = () => {
 
     const onClickFollow = () => {
         if (!article) return
-        dispatch(Profiles.follow({ username: article.author.username }))
+        dispatch(Articles.follow({ username: article.author.username, slug }))
     }
 
     const onClickUnFollow = () => {
         if (!article) return
-        dispatch(Profiles.unFollow({ username: article.author.username }))
+        dispatch(Articles.unFollow({ username: article.author.username, slug }))
     }
 
     const onClickFavorite = () => {
