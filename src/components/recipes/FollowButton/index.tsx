@@ -26,7 +26,7 @@ type UnFollowProps = {
 export const UnFollowButton = (props: UnFollowProps) => (
     <DesignSystem.Button
         size="sm"
-        className="btn-outline-secondary action-btn"
+        className="btn-secondary action-btn"
         onClick={props.onClickUnFollow}
     >
         <i className="ion-plus-round"></i>

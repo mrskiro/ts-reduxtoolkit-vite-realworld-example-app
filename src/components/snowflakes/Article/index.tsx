@@ -30,7 +30,10 @@ export const Article = (props: Props) => (
                         <img src={props.article.author.image} />
                     </DesignSystem.Link>
                     <div className="info">
-                        <DesignSystem.Link href="" className="author">
+                        <DesignSystem.Link
+                            href={`/${props.article.author.username}`}
+                            className="author"
+                        >
                             {props.article.author.username}
                         </DesignSystem.Link>
                         <span className="date">{props.article.createdAt}</span>
@@ -106,7 +109,9 @@ export const Article = (props: Props) => (
 
                 <div className="article-actions">
                     <div className="article-meta">
-                        <DesignSystem.Link href="profile.html">
+                        <DesignSystem.Link
+                            href={`/${props.article.author.username}`}
+                        >
                             <img src={props.article.author.image} />
                         </DesignSystem.Link>
                         <div className="info">

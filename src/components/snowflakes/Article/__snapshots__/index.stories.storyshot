@@ -84,7 +84,7 @@ Array [
             >
               <a
                 className="author"
-                href="/"
+                href="/jake"
                 onClick={[Function]}
               >
                 jake
@@ -163,7 +163,7 @@ Array [
           >
             <a
               className="undefined"
-              href="/profile.html"
+              href="/jake"
               onClick={[Function]}
             >
               <img
@@ -457,7 +457,7 @@ Array [
             >
               <a
                 className="author"
-                href="/"
+                href="/jake"
                 onClick={[Function]}
               >
                 jake
@@ -536,7 +536,7 @@ Array [
           >
             <a
               className="undefined"
-              href="/profile.html"
+              href="/jake"
               onClick={[Function]}
             >
               <img
@@ -830,7 +830,7 @@ Array [
             >
               <a
                 className="author"
-                href="/"
+                href="/jake"
                 onClick={[Function]}
               >
                 jake
@@ -842,7 +842,7 @@ Array [
               </span>
             </div>
             <button
-              className="btn btn-primary btn-outline-secondary action-btn btn-sm"
+              className="btn btn-primary btn-secondary action-btn btn-sm"
             >
               <i
                 className="ion-plus-round"
@@ -909,7 +909,7 @@ Array [
           >
             <a
               className="undefined"
-              href="/profile.html"
+              href="/jake"
               onClick={[Function]}
             >
               <img
@@ -933,7 +933,7 @@ Array [
               </span>
             </div>
             <button
-              className="btn btn-primary btn-outline-secondary action-btn btn-sm"
+              className="btn btn-primary btn-secondary action-btn btn-sm"
             >
               <i
                 className="ion-plus-round"

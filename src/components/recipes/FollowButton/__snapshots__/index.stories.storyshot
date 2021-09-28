@@ -15,7 +15,7 @@ exports[`Storyshots Recipes/FollowButton Default 1`] = `
 
 exports[`Storyshots Recipes/FollowButton Un Follow 1`] = `
 <button
-  className="btn btn-primary btn-outline-secondary action-btn btn-sm"
+  className="btn btn-primary btn-secondary action-btn btn-sm"
   onClick={[Function]}
 >
   <i
