@@ -47,17 +47,30 @@ export const Article = (props: Props) => (
                         />
                     )}
                     &nbsp;&nbsp;
-                    <DesignSystem.Button
-                        size="sm"
-                        className="btn-outline-primary"
-                        onClick={props.onClickFavorite}
-                    >
-                        <DesignSystem.Icon className="ion-heart" />
-                        &nbsp; Favorite Article{' '}
-                        <span className="counter">
-                            ({props.article.favoritesCount})
-                        </span>
-                    </DesignSystem.Button>
+                    {props.article.favorited ? (
+                        <DesignSystem.Button
+                            size="sm"
+                            onClick={props.onClickUnFavorite}
+                        >
+                            <DesignSystem.Icon className="ion-heart" />
+                            &nbsp; UnFavorite Article{' '}
+                            <span className="counter">
+                                ({props.article.favoritesCount})
+                            </span>
+                        </DesignSystem.Button>
+                    ) : (
+                        <DesignSystem.Button
+                            size="sm"
+                            className="btn-outline-primary"
+                            onClick={props.onClickFavorite}
+                        >
+                            <DesignSystem.Icon className="ion-heart" />
+                            &nbsp; Favorite Article{' '}
+                            <span className="counter">
+                                ({props.article.favoritesCount})
+                            </span>
+                        </DesignSystem.Button>
+                    )}
                 </div>
             </DesignSystem.Banner>
 

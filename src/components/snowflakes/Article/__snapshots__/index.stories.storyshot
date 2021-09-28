@@ -96,14 +96,13 @@ Array [
               </span>
             </div>
             <button
-              className="btn btn-primary btn-outline-secondary btn-sm"
+              className="btn btn-primary btn-outline-secondary action-btn btn-sm"
             >
               <i
                 className="ion-plus-round"
               />
-                Follow 
-              jake
-               
+                
+              Follow jake
             </button>
               
             <button
@@ -188,14 +187,13 @@ Array [
               </span>
             </div>
             <button
-              className="btn btn-primary btn-outline-secondary btn-sm"
+              className="btn btn-primary btn-outline-secondary action-btn btn-sm"
             >
               <i
                 className="ion-plus-round"
               />
-                Follow 
-              jake
-               
+                
+              Follow jake
             </button>
              
             <button
@@ -471,23 +469,22 @@ Array [
               </span>
             </div>
             <button
-              className="btn btn-primary btn-outline-secondary btn-sm"
+              className="btn btn-primary btn-outline-secondary action-btn btn-sm"
             >
               <i
                 className="ion-plus-round"
               />
-                Follow 
-              jake
-               
+                
+              Follow jake
             </button>
               
             <button
-              className="btn btn-primary btn-outline-primary btn-sm"
+              className="btn btn-primary  btn-sm"
             >
               <i
                 className="ion-heart"
               />
-                Favorite Article
+                UnFavorite Article
                
               <span
                 className="counter"
@@ -563,14 +560,13 @@ Array [
               </span>
             </div>
             <button
-              className="btn btn-primary btn-outline-secondary btn-sm"
+              className="btn btn-primary btn-outline-secondary action-btn btn-sm"
             >
               <i
                 className="ion-plus-round"
               />
-                Follow 
-              jake
-               
+                
+              Follow jake
             </button>
              
             <button
@@ -846,23 +842,22 @@ Array [
               </span>
             </div>
             <button
-              className="btn btn-primary btn-outline-secondary btn-sm"
+              className="btn btn-primary btn-outline-secondary action-btn btn-sm"
             >
               <i
                 className="ion-plus-round"
               />
-                Follow 
-              jake
-               
+                
+              UnFollow jake
             </button>
               
             <button
-              className="btn btn-primary btn-outline-primary btn-sm"
+              className="btn btn-primary  btn-sm"
             >
               <i
                 className="ion-heart"
               />
-                Favorite Article
+                UnFavorite Article
                
               <span
                 className="counter"
@@ -938,14 +933,13 @@ Array [
               </span>
             </div>
             <button
-              className="btn btn-primary btn-outline-secondary btn-sm"
+              className="btn btn-primary btn-outline-secondary action-btn btn-sm"
             >
               <i
                 className="ion-plus-round"
               />
-                Follow 
-              jake
-               
+                
+              UnFollow jake
             </button>
              
             <button
